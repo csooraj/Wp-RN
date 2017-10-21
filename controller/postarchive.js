@@ -12,7 +12,7 @@ function UploadPostArchiveDetails() {
         "PostArchiveSubTitleColor": PostArchive_subtitlecolor,
         "PostArchiveCategoryColor": PostArchive_categorycolor,
       };
-    firebase.database().ref("Test").update(data, function(error) {
+    firebase.database().ref("Test/PostArchive").update(data, function(error) {
       if (error !== null) {
         alert("Some Error Occured Try Again");
       } else {
@@ -21,7 +21,7 @@ function UploadPostArchiveDetails() {
         iframe.src = iframe.src;
       }
     });
-    firebase.database().ref(appname).update(data, function(error) {
+    firebase.database().ref(appname+"/PostArchive").update(data, function(error) {
       if (error !== null) {
         alert("Some Error Occured Try Again");
       }

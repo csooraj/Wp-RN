@@ -28,6 +28,21 @@
                   </div>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Label Font Family</label>
+                  <select class="form-control" id="labelfont">
+                    <option>normal</option>
+                    <option>notoserif</option>
+                    <option>sans-serif</option>
+                    <option>sans-serif-light</option>
+                    <option>sans-serif-thin</option>
+                    <option>sans-serif-condensed</option>
+                    <option>sans-serif-medium</option>
+                    <option>serif</option>
+                    <option>Roboto</option>
+                    <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label>Username Text Color</label>
                   <div class="input-group my-colorpicker2">
                     <input id="Menu_usercolor" type="text" class="form-control" placeholder="Click on right side button to select color">
@@ -100,6 +115,7 @@
           $("#Menu_usercolor").val(obj.MenuUserColor); $("#Menu_usercolor").trigger('change');
           $("#Menu_accordioncolor").val(obj.MenuAccordionColor); $("#Menu_accordioncolor").trigger('change');
           $("#Menu_bordercolor").val(obj.MenuBorderColor); $("#Menu_bordercolor").trigger('change');
+          document.getElementById("labelfont").value=obj.MenuFontFamily;
       }
     });
    });

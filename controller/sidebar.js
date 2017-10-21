@@ -2,6 +2,8 @@ function UploadSideBarDetails() {
   let appname = $.cookie("appname");
   let database = firebase.database();
   let Menu_textcolor = document.getElementById("Menu_textcolor").value;
+  var e2 = document.getElementById("labelfont");
+  let Menu_inputfontFamily = e2.options[e2.selectedIndex].text;
   let Menu_usercolor = document.getElementById("Menu_usercolor").value;
   let Menu_bgcolor = document.getElementById("Menu_bgcolor").value;
   let Menu_accordioncolor = document.getElementById("Menu_accordioncolor").value;
@@ -13,6 +15,7 @@ function UploadSideBarDetails() {
         "MenuTextColor": Menu_textcolor,
         "MenuUserColor": Menu_usercolor,
         "MenuBgColor": Menu_bgcolor,
+        "MenuFontFamily": Menu_inputfontFamily,
         "MenuAccordionColor": Menu_accordioncolor,
         "MenuBorderColor": Menu_bordercolor,
       };

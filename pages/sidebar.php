@@ -32,9 +32,11 @@
           <li><a href="./home.php"><i class="fa fa-circle-o"></i>Home</a></li>
           <li><a href="./postarchive.php"><i class="fa fa-circle-o"></i>Post Archive</a></li>
           <li><a href="./categoryarchive.php"><i class="fa fa-circle-o"></i>Category Archive</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i>Custom Post</a></li>
           <li><a href="./category.php"><i class="fa fa-circle-o"></i>Post Category</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i>Post Details</a></li>
+          <li><a href="./postdetails.php"><i class="fa fa-circle-o"></i>Post Details</a></li>
+          <li><a href="./search.php"><i class="fa fa-circle-o"></i>Search</a></li>
+          <li><a href="./editprofile.php"><i class="fa fa-circle-o"></i>Edit Profile</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Custom Post</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i>Comment</a></li>
         </ul>
       </li>

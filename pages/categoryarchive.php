@@ -37,6 +37,21 @@
                   </div>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Select Category Title Font Family:</label>
+                  <select class="form-control" id="CatArchive_fontFamily">
+                    <option>normal</option>
+                    <option>notoserif</option>
+                    <option>sans-serif</option>
+                    <option>sans-serif-light</option>
+                    <option>sans-serif-thin</option>
+                    <option>sans-serif-condensed</option>
+                    <option>sans-serif-medium</option>
+                    <option>serif</option>
+                    <option>Roboto</option>
+                    <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <a class="btn btn-app" onClick="UploadCategoryArchiveDetails()">
                     <i class="fa fa-save"></i> Save
                   </a>
@@ -65,9 +80,10 @@
   $(document).ready(function(){
     var appname = $.cookie("appname");
     document.getElementById("nameapp").innerHTML = appname;
-    $.getJSON("https://wp-react.firebaseio.com/"+appname+".json", function(result){
+    $.getJSON("https://wp-react.firebaseio.com/"+appname+"/CategoryArchive.json", function(result){
       var obj = result;
       if(obj.CategoryArchiveTitleColor!==undefined){
+          document.getElementById("CatArchive_fontFamily").value=obj.CategoryArchiveFont;
           $("#CatArchive_titlecolor").val(obj.CategoryArchiveTitleColor); $("#CatArchive_titlecolor").trigger('change');
           $("#CatArchive_bordercolor").val(obj.CategoryArchiveBorderColor); $("#CatArchive_bordercolor").trigger('change');
       }

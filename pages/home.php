@@ -46,7 +46,37 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label>Slider Sub Title Color</label>
+                  <label for="sel1">Slider Text Font Family</label>
+                  <select class="form-control" id="sliderfont">
+                    <option>normal</option>
+                    <option>notoserif</option>
+                    <option>sans-serif</option>
+                    <option>sans-serif-light</option>
+                    <option>sans-serif-thin</option>
+                    <option>sans-serif-condensed</option>
+                    <option>sans-serif-medium</option>
+                    <option>serif</option>
+                    <option>Roboto</option>
+                    <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Sub Title Font Family</label>
+                  <select class="form-control" id="subtitlefont">
+                    <option>normal</option>
+                    <option>notoserif</option>
+                    <option>sans-serif</option>
+                    <option>sans-serif-light</option>
+                    <option>sans-serif-thin</option>
+                    <option>sans-serif-condensed</option>
+                    <option>sans-serif-medium</option>
+                    <option>serif</option>
+                    <option>Roboto</option>
+                    <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Sub Title Color</label>
                   <div class="input-group my-colorpicker2">
                     <input id="Home_slidersubcolor" type="text" class="form-control" placeholder="Click on right side button to select color">
                     <div class="input-group-addon">
@@ -71,6 +101,21 @@
                       <i></i>
                     </div>
                   </div>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Category Font Family</label>
+                  <select class="form-control" id="categoryfont">
+                    <option>normal</option>
+                    <option>notoserif</option>
+                    <option>sans-serif</option>
+                    <option>sans-serif-light</option>
+                    <option>sans-serif-thin</option>
+                    <option>sans-serif-condensed</option>
+                    <option>sans-serif-medium</option>
+                    <option>serif</option>
+                    <option>Roboto</option>
+                    <option>monospace</option>
+                  </select>
                 </div>
                 <div class="form-group">
                   <a class="btn btn-app" onClick="UploadSideBarDetails()">
@@ -101,7 +146,7 @@
   $(document).ready(function(){
     var appname = $.cookie("appname");
     document.getElementById("nameapp").innerHTML = appname;
-    $.getJSON("https://wp-react.firebaseio.com/"+appname+".json", function(result){
+    $.getJSON("https://wp-react.firebaseio.com/"+appname+"/HomeScreen.json", function(result){
       var obj = result;
       if(obj.HomeHeaderColor!==undefined){
           $("#Home_headercolor").val(obj.HomeHeaderColor); $("#Home_headercolor").trigger('change');
@@ -110,6 +155,9 @@
           $("#Home_posttitlecolor").val(obj.HomePostTitleColor); $("#Home_posttitlecolor").trigger('change');
           $("#Home_categorytextcolor").val(obj.HomeCategoryTextColor); $("#Home_categorytextcolor").trigger('change');
           $("#Home_slidersubcolor").val(obj.HomeSliderSubTitleColor); $("#Home_slidersubcolor").trigger('change');
+          document.getElementById("sliderfont").value=obj.HomeCategoryFont;
+          document.getElementById("subtitlefont").value=obj.HomeSubtitleFont;
+          document.getElementById("categoryfont").value=obj.HomeSliderFont;
       }
     });
    });

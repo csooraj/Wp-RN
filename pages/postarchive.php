@@ -74,7 +74,7 @@
   $(document).ready(function(){
     var appname = $.cookie("appname");
     document.getElementById("nameapp").innerHTML = appname;
-    $.getJSON("https://wp-react.firebaseio.com/"+appname+".json", function(result){
+    $.getJSON("https://wp-react.firebaseio.com/"+appname+"/PostArchive.json", function(result){
       var obj = result;
       if(obj.PostArchiveTitleColor!==undefined){
           $("#PostArchive_subtitlecolor").val(obj.PostArchiveSubTitleColor); $("#PostArchive_subtitlecolor").trigger('change');
