@@ -35,9 +35,10 @@
           <li><a href="./category.php"><i class="fa fa-circle-o"></i>Post Category</a></li>
           <li><a href="./postdetails.php"><i class="fa fa-circle-o"></i>Post Details</a></li>
           <li><a href="./search.php"><i class="fa fa-circle-o"></i>Search</a></li>
+          <li><a href="./profile.php"><i class="fa fa-circle-o"></i>Profile</a></li>
           <li><a href="./editprofile.php"><i class="fa fa-circle-o"></i>Edit Profile</a></li>
+          <li><a href="./comment.php"><i class="fa fa-circle-o"></i>Comment</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i>Custom Post</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i>Comment</a></li>
         </ul>
       </li>
       <li class="treeview" id="downloads">
