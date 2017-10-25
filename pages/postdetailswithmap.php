@@ -12,7 +12,7 @@
           <div class="col-md-6">
             <div class="box box-info">
               <div class="box-header">
-                <h3 class="box-title">Configure Post Details Screen</h3>
+                <h3 class="box-title">Configure Post Details With Map Screen</h3>
               </div>
               <div class="box-body">
                 <div class="form-group">
@@ -189,11 +189,15 @@
     $(document).ready(function(){
       var appname = $.cookie("appname");
       document.getElementById("nameapp").innerHTML = appname;
-      $.getJSON("https://wp-react.firebaseio.com/"+appname+"/PostDetails.json", function(result){
+      $.getJSON("https://wp-react.firebaseio.com/"+appname+"/PostDetailsWithMap.json", function(result){
         var obj = result;
         if(obj.PostTitleSize!==undefined){
+          document.getElementById("Post_commentFont").value = obj.PostCommentFont;
+          document.getElementById("Post_commentSize").value = obj.PostCommentSize;
           document.getElementById("Post_titleSize").value = obj.PostTitleSize;
           document.getElementById("Post_titleFont").value = obj.PostTitleFont;
+          $("#Post_commentColor").val(obj.PostCommentColor); $("#Post_commentColor").trigger('change');
+          $("#Post_commentTextColor").val(obj.PostCommentTextColor); $("#Post_commentTextColor").trigger('change');
           $("#Post_titleColor").val(obj.PostTitleColor); $("#Post_titleColor").trigger('change');
           $("#Post_dateColor").val(obj.PostDateColor); $("#Post_dateColor").trigger('change');
           $("#Post_categoryColor").val(obj.PostCategoryColor); $("#Post_categoryColor").trigger('change');
@@ -207,5 +211,5 @@
       });
      });
   </script>
-  <script src="../controller/postdetails.js"></script>
+  <script src="../controller/postdetailswithmap.js"></script>
 </html>

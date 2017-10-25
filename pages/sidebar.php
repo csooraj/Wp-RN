@@ -38,6 +38,9 @@
           <li><a href="./profile.php"><i class="fa fa-circle-o"></i>Profile</a></li>
           <li><a href="./editprofile.php"><i class="fa fa-circle-o"></i>Edit Profile</a></li>
           <li><a href="./comment.php"><i class="fa fa-circle-o"></i>Comment</a></li>
+          <li><a href="./gallery.php"><i class="fa fa-circle-o"></i>Gallery</a></li>
+          <li><a href="./postdetailswithmap.php"><i class="fa fa-circle-o"></i>Post Details With Map</a></li>
+          <li><a href="./postlist.php"><i class="fa fa-circle-o"></i>Post List</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i>Custom Post</a></li>
         </ul>
       </li>

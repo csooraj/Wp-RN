@@ -9,12 +9,12 @@ function UploadPostViewDetails() {
   var e3 = document.getElementById("Post_authorFont");
   let Post_authorfontFamily = e3.options[e3.selectedIndex].text;
   let Post_categoryColor = document.getElementById("Post_categoryColor").value;
+  let Post_commentTextColor = document.getElementById("Post_commentTextColor").value;
   let Post_categoryFont = document.getElementById("Post_categoryFont").value;
   let Post_categorySize = document.getElementById("Post_categorySize").value;
   let Post_contentColor = document.getElementById("Post_contentColor").value;
   let Post_contentFont = document.getElementById("Post_contentFont").value;
   let Post_contentSize = document.getElementById("Post_contentSize").value;
-  let Post_commentTextColor = document.getElementById("Post_commentTextColor").value;
   let Post_commentColor = document.getElementById("Post_commentColor").value;
   let Post_commentFont = document.getElementById("Post_commentFont").value;
   let Post_commentSize = document.getElementById("Post_commentSize").value;
@@ -38,7 +38,7 @@ function UploadPostViewDetails() {
         "PostCommentFont": Post_commentFont,
         "PostCommentSize": Post_commentSize,
       };
-    firebase.database().ref("Test/PostDetails").update(data, function(error) {
+    firebase.database().ref("Test/PostDetailsWithMap").update(data, function(error) {
       if (error !== null) {
         alert("Some Error Occured Try Again");
       } else {
@@ -47,7 +47,7 @@ function UploadPostViewDetails() {
         iframe.src = iframe.src;
       }
     });
-    firebase.database().ref(appname+"/PostDetails").update(data, function(error) {
+    firebase.database().ref(appname+"/PostDetailsWithMap").update(data, function(error) {
       if (error !== null) {
         alert("Some Error Occured Try Again");
       }
