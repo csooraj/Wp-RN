@@ -41,7 +41,7 @@
           <li><a href="./gallery.php"><i class="fa fa-circle-o"></i>Gallery</a></li>
           <li><a href="./postdetailswithmap.php"><i class="fa fa-circle-o"></i>Post Details With Map</a></li>
           <li><a href="./postlist.php"><i class="fa fa-circle-o"></i>Post List</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i>Custom Post</a></li>
+          <li><a href="./categorypostlist.php"><i class="fa fa-circle-o"></i>Category Post List</a></li>
         </ul>
       </li>
       <li class="treeview" id="downloads">
