@@ -8,6 +8,14 @@ function UploadAccountDetails() {
   let account_titlefontFamily = e1.options[e1.selectedIndex].text;
   var e2 = document.getElementById("inputlabelfont");
   let account_inputfontFamily = e2.options[e2.selectedIndex].text;
+  let e3 = document.getElementById("titleFontIOS");
+  let account_titlefontFamilyIos = e3.options[e3.selectedIndex].text;
+  var e4 = document.getElementById("inputlabelfontIOS");
+  let account_inputfontFamilyIos = e4.options[e4.selectedIndex].text;
+  var e5 = document.getElementById("buttonlabelfontIOS");
+  let account_buttonTextFontIos = e5.options[e5.selectedIndex].text;
+  var e6 = document.getElementById("buttonlabelfont");
+  let account_buttonTextFont = e6.options[e6.selectedIndex].text;
   let file1 = account_bg.files[0];
   let account_titleColor = document.getElementById("titlecolor").value;
   let account_titleSize = document.getElementById("titlesize").value;
@@ -27,11 +35,15 @@ function UploadAccountDetails() {
       var data = {
         "AccountInputColor": account_inputBgColor,
         "AccountTitleFont": account_titlefontFamily,
+        "AccountTitleFontIos": account_titlefontFamilyIos,
         "AccountInputFont": account_inputfontFamily,
+        "AccountInputFontIos": account_inputfontFamilyIos,
         "AccountBackLabelColor": account_backLabelColor,
         "AccountBackLabelSize": account_backLabelSize,
         "AccountButtonColor": account_buttonColor,
         "AccountButtonTextSize": account_buttonTextSize,
+        "AccountButtonTextFontIos": account_buttonTextFontIos,
+        "AccountButtonTextFont": account_buttonTextFont,
         "AccountButtonTextColor": account_buttonTextColor,
         "AccountTitleColor": account_titleColor,
         "AccountTitleSize": account_titleSize,
@@ -44,6 +56,8 @@ function UploadAccountDetails() {
       var data = {
         "AccountBgUrl": file1.name,
         "AccountInputColor": account_inputBgColor,
+        "AccountTitleFontIos": account_titlefontFamilyIos,
+        "AccountInputFontIos": account_inputfontFamilyIos,
         "AccountTitleFont": account_titlefontFamily,
         "AccountInputFont": account_inputfontFamily,
         "AccountBackLabelColor": account_backLabelColor,

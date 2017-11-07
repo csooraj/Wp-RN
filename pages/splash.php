@@ -39,7 +39,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Select Font Family:</label>
+                  <label for="sel1">Select Font Family Android:</label>
                   <select class="form-control" id="Splash_fontFamily">
                     <option>normal</option>
                     <option>notoserif</option>
@@ -51,6 +51,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Select Font Family iOS:</label>
+                  <select class="form-control" id="Splash_fontIOSFamily">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -99,6 +123,7 @@
   </body>
   <script>
     $(document).ready(function(){
+      $('#myid1').addClass('active');
       var appname = $.cookie("appname");
       document.getElementById("nameapp").innerHTML = appname;
       $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Splash.json", function(result){
@@ -109,7 +134,8 @@
         $("#Splash_bgcolor").val(obj.SplashBgColor); $("#Splash_bgcolor").trigger('change');
         $("#Splash_titleColor").val(obj.SplashtitleColor); $("#Splash_titleColor").trigger('change');
         document.getElementById("Splash_titleSize").value=obj.SplashtitleSize;
-        document.getElementById("Splash_fontFamily").value=obj.SplashtitleFontFamily
+        document.getElementById("Splash_fontFamily").value=obj.SplashtitleFontFamily;
+        document.getElementById("Splash_fontIOSFamily").value=obj.SplashtitleFontIos;
         document.getElementById("image").src=url;
         document.getElementById("Splash_title").value=obj.Splashtitle;
         if(type==='hide'){

@@ -5,6 +5,8 @@ function UploadCategoryArchiveDetails() {
   let CatArchive_bordercolor = document.getElementById("CatArchive_bordercolor").value;
   let e1 = document.getElementById("CatArchive_fontFamily");
   let CatArchive_fontFamily = e1.options[e1.selectedIndex].text;
+  let e2 = document.getElementById("CatArchive_fontFamilyIOS");
+  let CatArchive_fontFamilyIOS = e2.options[e2.selectedIndex].text;
 
 
 
@@ -13,7 +15,8 @@ function UploadCategoryArchiveDetails() {
       var data = {
         "CategoryArchiveTitleColor": CatArchive_titlecolor,
         "CategoryArchiveBorderColor": CatArchive_bordercolor,
-        "CatgeoryArchiveFont": CatArchive_fontFamily,
+        "CategoryArchiveFont": CatArchive_fontFamily,
+        "CategoryArchiveFontIOS": CatArchive_fontFamilyIOS,
       };
     firebase.database().ref("Test/CategoryArchive").update(data, function(error) {
       if (error !== null) {

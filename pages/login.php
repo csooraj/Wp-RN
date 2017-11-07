@@ -39,7 +39,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Select Login Label Font Family:</label>
+                  <label for="sel1">Select Login Label Font Family Android:</label>
                   <select class="form-control" id="Login_labelFont">
                     <option>normal</option>
                     <option>notoserif</option>
@@ -51,6 +51,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Select Login Label Font Family iOS:</label>
+                  <select class="form-control" id="Login_fontIOSFamily">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -76,7 +100,7 @@
                   <input id="Login_buttonTextSize" type="number" class="form-control">
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Select Login Button Label Font Family:</label>
+                  <label for="sel1">Select Login Button Label Font Family Android:</label>
                   <select class="form-control" id="Login_buttonFont">
                     <option>normal</option>
                     <option>notoserif</option>
@@ -88,6 +112,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Select Login Button Font Family iOS:</label>
+                  <select class="form-control" id="Login_buttonFontIOSFamily">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -117,6 +165,7 @@
   </body>
   <script>
     $(document).ready(function(){
+      $('#myid2').addClass('active');
       var appname = $.cookie("appname");
       document.getElementById("nameapp").innerHTML = appname;
       $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Login.json", function(result){
@@ -130,6 +179,8 @@
           document.getElementById("Login_labelSize").value=obj.LoginLabelSize;
           document.getElementById("Login_labelFont").value=obj.LoginLabelFont;
           document.getElementById("Login_buttonFont").value=obj.LoginButtonLabelFont;
+          document.getElementById("Login_fontIOSFamily").value=obj.LoginLabelIosFont;
+          document.getElementById("Login_buttonFontIOSFamily").value=obj.LoginButtonLabelIosFont;
           document.getElementById("image1").src=logourl;
           document.getElementById("image2").src=backgroundurl;
           document.getElementById("Login_buttonTextSize").value=obj.LoginButtonTextSize;

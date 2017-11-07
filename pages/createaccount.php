@@ -34,7 +34,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Select Title Font Family:</label>
+                  <label for="sel1">Select Title Font Family Android:</label>
                   <select class="form-control" id="titleFont">
                     <option>normal</option>
                     <option>notoserif</option>
@@ -49,11 +49,35 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Select Title Font Family iOS:</label>
+                  <select class="form-control" id="titleFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label>Text Input Label Size</label>
                   <input id="labelsize" type="number" class="form-control">
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Select Input Label Font Family:</label>
+                  <label for="sel1">Select Input Label Font Family Android:</label>
                   <select class="form-control" id="inputlabelfont">
                     <option>normal</option>
                     <option>notoserif</option>
@@ -65,6 +89,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Select Title Font Family iOS:</label>
+                  <select class="form-control" id="inputlabelfontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -106,6 +154,45 @@
                       <i></i>
                     </div>
                   </div>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Continue Button Label Font Family Android:</label>
+                  <select class="form-control" id="buttonlabelfont">
+                    <option>normal</option>
+                    <option>notoserif</option>
+                    <option>sans-serif</option>
+                    <option>sans-serif-light</option>
+                    <option>sans-serif-thin</option>
+                    <option>sans-serif-condensed</option>
+                    <option>sans-serif-medium</option>
+                    <option>serif</option>
+                    <option>Roboto</option>
+                    <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Continue Button Label Font Family iOS:</label>
+                  <select class="form-control" id="buttonlabelfontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
                 </div>
                 <div class="form-group">
                   <label>Back Button Text Color</label>
@@ -160,6 +247,7 @@
   </body>
   <script>
     $(document).ready(function(){
+      $('#myid3').addClass('active');
       var appname = $.cookie("appname");
       document.getElementById("nameapp").innerHTML = appname;
       $.getJSON("https://wp-react.firebaseio.com/"+appname+"/CreateAccount.json", function(result){
@@ -169,7 +257,11 @@
             document.getElementById("image").src=backgroundurl;
             document.getElementById("titlesize").value=obj.AccountTitleSize;
             document.getElementById("inputlabelfont").value=obj.AccountInputFont;
+            document.getElementById("inputlabelfontIOS").value=obj.AccountInputFontIos;
+            document.getElementById("buttonlabelfont").value=obj.AccountButtonTextFont;
+            document.getElementById("buttonlabelfontIOS").value=obj.AccountButtonTextFontIos;
             document.getElementById("titleFont").value=obj.AccountTitleFont;
+            document.getElementById("titleFontIOS").value=obj.AccountTitleFontIos;
             document.getElementById("labelsize").value=obj.AccountLabelSize;
             document.getElementById("continuebuttonlabelsize").value=obj.AccountButtonTextSize;
             document.getElementById("backbuttontextsize").value=obj.AccountBackLabelSize;

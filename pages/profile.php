@@ -20,7 +20,7 @@
                   <input id="EditProfile_cpSize" type="number" class="form-control">
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Username Font Family:</label>
+                  <label for="sel1">Username Font Family Android:</label>
                   <select class="form-control" id="EditProfile_cpFont">
                     <option>normal</option>
                     <option>notoserif</option>
@@ -35,6 +35,30 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Username Font Family IOS:</label>
+                  <select class="form-control" id="EditProfile_cpFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label>Username Title Color</label>
                   <div class="input-group my-colorpicker2">
                     <input id="EditProfile_cpTitleColor" type="text" class="form-control" placeholder="Click on right side button to select color">
@@ -44,7 +68,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Username Subtitle Font Family:</label>
+                  <label for="sel1">Username Subtitle Font Family Android:</label>
                   <select class="form-control" id="EditProfile_sbFont">
                     <option>normal</option>
                     <option>notoserif</option>
@@ -56,6 +80,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Username Subtitle Font Family IOS:</label>
+                  <select class="form-control" id="EditProfile_sbFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -83,6 +131,30 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Username Subtitle Font Family IOS:</label>
+                  <select class="form-control" id="EditProfile_formLabelFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label>Form Label Color</label>
                   <div class="input-group my-colorpicker2">
                     <input id="EditProfile_formColor" type="text" class="form-control" placeholder="Click on right side button to select color">
@@ -104,6 +176,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Editprofile Button Text Font Family IOS:</label>
+                  <select class="form-control" id="EditProfile_submitFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -165,16 +261,21 @@
   <script>
     $(document).ready(function(){
       var appname = $.cookie("appname");
+      $('#myid12').addClass('active');
       document.getElementById("nameapp").innerHTML = appname;
       $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Profile.json", function(result){
         var obj = result;
         if(obj.UsernameFontFamily!==undefined){
-          document.getElementById("EditProfile_cpFont").text = obj.UsernameFontFamily;
-          document.getElementById("EditProfile_formLabelFont").text = obj.UserNameFormFont;
+          document.getElementById("EditProfile_cpFont").value = obj.UsernameFontFamily;
+          document.getElementById("EditProfile_cpFontIOS").value = obj.UserNameFormFontIOS;
+          document.getElementById("EditProfile_sbFont").value = obj.UserNameSubTitleFont;
+          document.getElementById("EditProfile_sbFontIOS").value = obj.UserNameSubTitleFontIOS;
+          document.getElementById("EditProfile_formLabelFont").value = obj.UserNameFormFont;
+          document.getElementById("EditProfile_formLabelFontIOS").value = obj.UserNameFormFontIOS;
           document.getElementById("EditProfile_submitFont").value = obj.EditProfileButtonTextFont;
+          document.getElementById("EditProfile_submitFontIOS").value = obj.EditProfileButtonTextFontIOS;
           document.getElementById("EditProfile_cpSize").value = obj.UserNameFontSize;
           document.getElementById("EditProfile_submitTextSize").value = obj.EditProfileButtonTextSize;
-          document.getElementById("EditProfile_submitFont").value = obj.EditProfileButtonTextFont;
           $("#EditProfile_sbTitleColor").val(obj.UserNameSubTitleColor); $("#EditProfile_sbTitleColor").trigger('change');
           $("#EditProfile_formBorderColor").val(obj.UserNameFormBorderColor); $("#EditProfile_formBorderColor").trigger('change');
           $("#EditProfile_cpTitleColor").val(obj.UserNameTextColor); $("#EditProfile_cpTitleColor").trigger('change');

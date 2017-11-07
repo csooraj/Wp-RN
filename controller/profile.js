@@ -12,28 +12,33 @@ function UploadEditProfileDetails() {
 
   let e1 = document.getElementById("EditProfile_cpFont");
   let EditProfile_cpFont = e1.options[e1.selectedIndex].text;
-
+  let EditProfile_cpFontIOS = document.getElementById("EditProfile_cpFontIOS").value;
   let e4 = document.getElementById("EditProfile_sbFont");
   let EditProfile_sbFont = e4.options[e4.selectedIndex].text;
-
+  let EditProfile_sbFontIOS = document.getElementById("EditProfile_sbFontIOS").value;
   let e2 = document.getElementById("EditProfile_formLabelFont");
   let EditProfile_formLabelFont = e2.options[e2.selectedIndex].text;
-
+  let EditProfile_formLabelFontIOS = document.getElementById("EditProfile_formLabelFontIOS").value;
   let e3 = document.getElementById("EditProfile_submitFont");
   let EditProfile_submitFont = e3.options[e3.selectedIndex].text;
+  let EditProfile_submitFontIOS = document.getElementById("EditProfile_submitFontIOS").value;
 
   if ((EditProfile_cpSize !== '') && (EditProfile_cpTitleColor !== '') && (EditProfile_submitTextSize  !== '')) {
     document.getElementById("Error").innerHTML = "";
       var data = {
         "UserNameFontSize": EditProfile_cpSize,
         "UserNameFontFamily": EditProfile_cpFont,
+        "UserNameFontFamilyIOS": EditProfile_cpFontIOS,
         "UserNameTextColor": EditProfile_cpTitleColor,
         "UserNameSubTitleFont": EditProfile_sbFont,
+        "UserNameSubTitleFontIOS": EditProfile_sbFontIOS,
         "UserNameSubTitleColor": EditProfile_sbTitleColor,
         "UserNameFormLabel": EditProfile_formColor,
         "UserNameFormFont": EditProfile_formLabelFont,
+        "UserNameFormFontIOS": EditProfile_formLabelFontIOS,
         "EditProfileButtonTextSize": EditProfile_submitTextSize,
         "EditProfileButtonTextFont": EditProfile_submitFont,
+        "EditProfileButtonTextFontIOS": EditProfile_submitFontIOS,
         "EditProfileButtonTextColor": EditProfile_SubmitTextColor,
         "EditProfileButtonBg": EditProfile_submitBg,
         "UserNameFormBorderColor": EditProfile_formBorderColor,

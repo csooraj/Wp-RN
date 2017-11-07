@@ -18,6 +18,11 @@ function UploadPostViewDetails() {
   let Post_commentColor = document.getElementById("Post_commentColor").value;
   let Post_commentFont = document.getElementById("Post_commentFont").value;
   let Post_commentSize = document.getElementById("Post_commentSize").value;
+  let Post_titlefontFamilyIOS = document.getElementById("Post_titleFontIOS").value;
+  let Post_authorfontFamilyIOS = document.getElementById("Post_authorFontIOS").value;
+  let Post_categoryFontIOS = document.getElementById("Post_categoryFontIOS").value;
+  let Post_contentFontIOS = document.getElementById("Post_contentFontIOS").value;
+  let Post_commentFontIOS = document.getElementById("Post_commentFontIOS").value;
 
   if ((Post_titleSize !== '') && (Post_titlefontFamily !== '') && (Post_titlecolor !== '') && (Post_datecolor !== '') && (Post_authorfontFamily !== '')) {
     document.getElementById("Error").innerHTML = "";
@@ -25,17 +30,22 @@ function UploadPostViewDetails() {
         "PostTitleSize": Post_titleSize,
         "PostTitleColor": Post_titlecolor,
         "PostTitleFont": Post_titlefontFamily,
+        "PostTitleFontIOS": Post_titlefontFamilyIOS,
         "PostDateColor": Post_datecolor,
         "PostAuthorFont": Post_authorfontFamily,
+        "PostAuthorFontIOS": Post_authorfontFamilyIOS,
         "PostCategoryColor": Post_categoryColor,
         "PostCategorySize": Post_categorySize,
         "PostCategoryFont": Post_categoryFont,
+        "PostCategoryFontIOS": Post_categoryFontIOS,
         "PostContentColor": Post_contentColor,
         "PostContentSize": Post_contentSize,
         "PostContentFont": Post_contentFont,
+        "PostContentFontIOS": Post_contentFontIOS,
         "PostCommentColor": Post_commentColor,
         "PostCommentTextColor": Post_commentTextColor,
         "PostCommentFont": Post_commentFont,
+        "PostCommentFontIOS": Post_commentFontIOS,
         "PostCommentSize": Post_commentSize,
       };
     firebase.database().ref("Test/PostDetailsWithMap").update(data, function(error) {

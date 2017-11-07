@@ -14,6 +14,8 @@ function UploadSplash() {
   let titleSize = document.getElementById("Splash_titleSize").value;
   var e = document.getElementById("Splash_fontFamily");
   let fontFamily = e.options[e.selectedIndex].text;
+  var e1 = document.getElementById("Splash_fontIOSFamily");
+  let fontFamilyIOS = e1.options[e1.selectedIndex].text;
   let layouttype = document.querySelector('input[name="optradio"]:checked').value;
   let titleColor = document.getElementById("Splash_titleColor").value;
   var fileChooser = document.getElementById('fileUpload');
@@ -30,6 +32,7 @@ function UploadSplash() {
         "type": layouttype,
         "Splashtitle": title,
         "SplashtitleFontFamily": fontFamily,
+        "SplashtitleFontIos": fontFamilyIOS,
         "SplashtitleSize": titleSize,
         "SplashtitleColor": titleColor
       };
@@ -38,6 +41,7 @@ function UploadSplash() {
         "AppName": appname,
         "SplashBgColor": backgroundColor,
         "SplashtitleFontFamily": fontFamily,
+        "SplashtitleFontIos": fontFamilyIOS,
         "type": layouttype,
         "SplashlogoUrl": file.name,
         "Splashtitle": title,
@@ -75,12 +79,16 @@ function UploadLogin() {
   var file2 = login_logo.files[0];
   let login_labelColor = document.getElementById("Login_textColor").value;
   let login_labelSize = document.getElementById("Login_labelSize").value;
-  var e = document.getElementById("Login_labelFont");
-  let login_labelfontFamily = e.options[e.selectedIndex].text;
+  var e1 = document.getElementById("Login_labelFont");
+  let login_labelfontFamily = e1.options[e1.selectedIndex].text;
+  var e3 = document.getElementById("Login_fontIOSFamily");
+  let login_fontFamilyIOS = e3.options[e3.selectedIndex].text;
   let login_buttonColor = document.getElementById("Login_buttonColor").value;
   let login_buttonTextSize = document.getElementById("Login_buttonTextSize").value;
-  var e = document.getElementById("Login_buttonFont");
-  let login_buttonfontFamily = e.options[e.selectedIndex].text;
+  var e2 = document.getElementById("Login_buttonFont");
+  let login_buttonfontFamily = e2.options[e2.selectedIndex].text;
+  var e4 = document.getElementById("Login_buttonFontIOSFamily");
+  let login_buttonfontFamilyIOS = e4.options[e4.selectedIndex].text;
   let login_inputBgColor = document.getElementById("Login_inputColor").value;
   if ((login_labelColor !== '') && (login_labelSize !== '') && (login_buttonColor !== '') && (login_buttonTextSize !== '') && (login_inputBgColor !== '')) {
     document.getElementById("Error").innerHTML = "";
@@ -91,6 +99,8 @@ function UploadLogin() {
         "LoginLabelColor": login_labelColor,
         "LoginLabelSize": login_labelSize,
         "LoginLabelFont": login_labelfontFamily,
+        "LoginLabelIosFont": login_fontFamilyIOS,
+        "LoginButtonLabelIosFont": login_buttonfontFamilyIOS,
         "LoginButtonLabelFont": login_buttonfontFamily,
         "LoginButtonColor": login_buttonColor,
         "LoginButtonTextSize": login_buttonTextSize

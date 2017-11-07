@@ -11,6 +11,10 @@ function UploadSearchViewDetails() {
 
   let e1 = document.getElementById("Search_placeFont");
   let Search_placeFont = e1.options[e1.selectedIndex].text;
+  let Search_placeFontIOS = document.getElementById("Search_placeFontIOS").value;
+  let Search_latestFontIOS = document.getElementById("Search_latestFontIOS").value;
+  let Search_itemFontIOS = document.getElementById("Search_itemFontIOS").value;
+  let Search_deleteButtonFontIOS = document.getElementById("Search_deleteButtonFontIOS").value;
 
   let e2 = document.getElementById("Search_deleteButtonFont");
   let Search_deleteButtonFont = e2.options[e2.selectedIndex].text;
@@ -34,9 +38,13 @@ function UploadSearchViewDetails() {
         "SearchItemColor": Search_itemColor,
         "SearchItemBorderColor": Search_itemBorderColor,
         "SearchPlaceholderFont": Search_placeFont,
+        "SearchPlaceholderFontIOS": Search_placeFontIOS,
         "SearchDeleteButtonFont": Search_deleteButtonFont,
+        "SearchDeleteButtonFontIOS": Search_deleteButtonFontIOS,
         "SearchItemFont": Search_itemFont,
+        "SearchItemFontIOS": Search_itemFontIOS,
         "SearchLatestFont": Search_latestFont,
+        "SearchLatestFontIOS": Search_latestFontIOS,
         "SearchLatestSize": Search_latestSize,
 
       };

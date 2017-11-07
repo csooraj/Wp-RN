@@ -46,7 +46,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Slider Text Font Family</label>
+                  <label for="sel1">Slider Text Font Family Android:</label>
                   <select class="form-control" id="sliderfont">
                     <option>normal</option>
                     <option>notoserif</option>
@@ -61,7 +61,31 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Sub Title Font Family</label>
+                  <label for="sel1">Slider Text Font Family IOS:</label>
+                  <select class="form-control" id="sliderfontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Sub Title Font Family Android:</label>
                   <select class="form-control" id="subtitlefont">
                     <option>normal</option>
                     <option>notoserif</option>
@@ -73,6 +97,69 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Sub Title Font Family iOS:</label>
+                  <select class="form-control" id="subtitlefontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Title Font Family Android:</label>
+                  <select class="form-control" id="titlefont">
+                    <option>normal</option>
+                    <option>notoserif</option>
+                    <option>sans-serif</option>
+                    <option>sans-serif-light</option>
+                    <option>sans-serif-thin</option>
+                    <option>sans-serif-condensed</option>
+                    <option>sans-serif-medium</option>
+                    <option>serif</option>
+                    <option>Roboto</option>
+                    <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Title Font Family iOS:</label>
+                  <select class="form-control" id="titlefontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -118,6 +205,30 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Category Font Family iOS:</label>
+                  <select class="form-control" id="categoryfontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <a class="btn btn-app" onClick="UploadSideBarDetails()">
                     <i class="fa fa-save"></i> Save
                   </a>
@@ -145,7 +256,7 @@
 <script>
   $(document).ready(function(){
     var appname = $.cookie("appname");
-    document.getElementById("nameapp").innerHTML = appname;
+    $('#myid6').addClass('active');
     $.getJSON("https://wp-react.firebaseio.com/"+appname+"/HomeScreen.json", function(result){
       var obj = result;
       if(obj.HomeHeaderColor!==undefined){
@@ -155,9 +266,14 @@
           $("#Home_posttitlecolor").val(obj.HomePostTitleColor); $("#Home_posttitlecolor").trigger('change');
           $("#Home_categorytextcolor").val(obj.HomeCategoryTextColor); $("#Home_categorytextcolor").trigger('change');
           $("#Home_slidersubcolor").val(obj.HomeSliderSubTitleColor); $("#Home_slidersubcolor").trigger('change');
-          document.getElementById("sliderfont").value=obj.HomeCategoryFont;
+          document.getElementById("sliderfont").value=obj.HomeSliderFont;
+          document.getElementById("sliderfontIOS").value=obj.HomeSliderFontIOS;
           document.getElementById("subtitlefont").value=obj.HomeSubtitleFont;
-          document.getElementById("categoryfont").value=obj.HomeSliderFont;
+          document.getElementById("subtitlefontIOS").value=obj.HomeSubtitleFontIOS;
+          document.getElementById("titlefont").value=obj.HomeTitleFont;
+          document.getElementById("titlefontIOS").value=obj.HomeTitleFontIOS;
+          document.getElementById("categoryfont").value=obj.HomeCategoryFont;
+          document.getElementById("categoryfontIOS").value=obj.HomeCategoryFontIOS;
       }
     });
    });

@@ -25,8 +25,8 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Tab Bar Text Font Family</label>
-                  <select class="form-control" id="Tabbar_Font">
+                  <label for="sel1">Tab Bar Text Font Family Android:</label>
+                  <select class="form-control" id="TabBar_Font">
                     <option>normal</option>
                     <option>notoserif</option>
                     <option>sans-serif</option>
@@ -37,6 +37,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Tab Bar Text Family iOS:</label>
+                  <select class="form-control" id="TabBar_FontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -89,15 +113,17 @@
   <script>
     $(document).ready(function(){
       var appname = $.cookie("appname");
+      $('#myid15').addClass('active');
       document.getElementById("nameapp").innerHTML = appname;
       $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Gallery.json", function(result){
         var obj = result;
         if(obj.TabBarBg!==undefined){
-          document.getElementById("TabBarFont").text = obj.TabBarBg;
+          document.getElementById("TabBar_Font").value = obj.TabBarFont;
+          document.getElementById("TabBar_FontIOS").value = obj.TabBarFontIOS;
           document.getElementById("Tabbar_textSize").value = obj.TabBarTextSize;
-          $("#TabBarBg").val(obj.TabBarBg); $("#TabBarBg").trigger('change');
-          $("#TabBarTextColor").val(obj.TabBarTextColor); $("#TabBarTextColor").trigger('change');
-          $("#TabBarBorderColor").val(obj.TabBarBorderColor); $("#TabBarBorderColor").trigger('change');
+          $("#Tabbar_Bg").val(obj.TabBarBg); $("#Tabbar_Bg").trigger('change');
+          $("#Tabbar_textColor").val(obj.TabBarTextColor); $("#Tabbar_textColor").trigger('change');
+          $("#Tabbar_borderColor").val(obj.TabBarBorderColor); $("#Tabbar_borderColor").trigger('change');
         }
       });
      });

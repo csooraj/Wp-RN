@@ -61,6 +61,30 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Post Title Font Family iOS:</label>
+                  <select class="form-control" id="Post_titleFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label for="sel1">Post SubTitle Font Family </label>
                   <select class="form-control" id="Post_authorFont">
                     <option>normal</option>
@@ -76,6 +100,30 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Post SubTitle Font Family iOS:</label>
+                  <select class="form-control" id="Post_authorFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label for="sel1">Post Category Font Family </label>
                   <select class="form-control" id="Post_categoryFont">
                     <option>normal</option>
@@ -88,6 +136,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Post Category Font Family iOS:</label>
+                  <select class="form-control" id="Post_categoryFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -121,6 +193,30 @@
                       <option>serif</option>
                       <option>Roboto</option>
                       <option>monospace</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="sel1">Category Title Font Family iOS:</label>
+                    <select class="form-control" id="Post_imageTitleFontIOS">
+                      <option>San Francisco</option>
+                      <option>Academy Engraved LET</option>
+                      <option>AcademyEngravedLetPlain</option>
+                      <option>Al Nile</option>
+                      <option>AlNile-Bold</option>
+                      <option>Avenir-Heavy</option>
+                      <option>Avenir-HeavyOblique</option>
+                      <option>SinhalaSangamMN</option>
+                      <option>SinhalaSangamMN-Bold</option>
+                      <option>Snell Roundhand</option>
+                      <option>SnellRoundhand-Black</option>
+                      <option>SnellRoundhand-Bold</option>
+                      <option>Verdana</option>
+                      <option>Verdana-Bold</option>
+                      <option>Verdana-BoldItalic</option>
+                      <option>Verdana-Italic</option>
+                      <option>Zapf Dingbats</option>
+                      <option>ZapfDingbatsITC</option>
+                      <option>Zapfino</option>
                     </select>
                   </div>
                 </div>
@@ -167,6 +263,30 @@
                       <option>monospace</option>
                     </select>
                   </div>
+                  <div class="form-group">
+                    <label for="sel1">Category Title Font Family iOS:</label>
+                    <select class="form-control" id="Post_tabFontIOS">
+                      <option>San Francisco</option>
+                      <option>Academy Engraved LET</option>
+                      <option>AcademyEngravedLetPlain</option>
+                      <option>Al Nile</option>
+                      <option>AlNile-Bold</option>
+                      <option>Avenir-Heavy</option>
+                      <option>Avenir-HeavyOblique</option>
+                      <option>SinhalaSangamMN</option>
+                      <option>SinhalaSangamMN-Bold</option>
+                      <option>Snell Roundhand</option>
+                      <option>SnellRoundhand-Black</option>
+                      <option>SnellRoundhand-Bold</option>
+                      <option>Verdana</option>
+                      <option>Verdana-Bold</option>
+                      <option>Verdana-BoldItalic</option>
+                      <option>Verdana-Italic</option>
+                      <option>Zapf Dingbats</option>
+                      <option>ZapfDingbatsITC</option>
+                      <option>Zapfino</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="form-group">
                   <a class="btn btn-app" onClick="UploadPostArchiveDetails()">
@@ -196,10 +316,12 @@
 <script>
   $(document).ready(function(){
     var appname = $.cookie("appname");
+    $('#myid18').addClass('active');
     $('#tabbar').hide();
     $('#thumbnail').hide();
     document.getElementById("nameapp").innerHTML = appname;
-    $.getJSON("https://wp-react.firebaseio.com/"+appname+"/CategoryPostList.json", function(result){
+    let custompost = $.cookie("custompost");
+    $.getJSON("https://wp-react.firebaseio.com/"+appname+"/CategoryPostList/"+custompost+"/.json", function(result){
       var obj = result;
       if(obj.PostArchiveTitleColor!==undefined){
           $("#PostArchive_tabBgcolor").val(obj.PostTabBgColor); $("#PostArchive_tabBgcolor").trigger('change');
@@ -210,10 +332,15 @@
           $("#PostArchive_titlecolor").val(obj.PostArchiveTitleColor); $("#PostArchive_titlecolor").trigger('change');
           $("#PostArchive_categorycolor").val(obj.PostArchiveCategoryColor); $("#PostArchive_categorycolor").trigger('change');
           document.getElementById("Post_authorFont").value=obj.PostAuthorFont;
+          document.getElementById("Post_authorFontIOS").value=obj.PostAuthorFontIOS;
           document.getElementById("Post_imageTitleFont").value=obj.PostArchiveImageTitleFont;
+          document.getElementById("Post_imageTitleFontIOS").value=obj.PostArchiveImageTitleFontIOS;
           document.getElementById("Post_tabFont").value=obj.PostTabFont;
+          document.getElementById("Post_tabFontIOS").value=obj.PostTabFontIOS;
           document.getElementById("Post_titleFont").value=obj.PostTitleFontFamily;
+          document.getElementById("Post_titleFontIOS").value=obj.PostTitleFontFamilyIOS;
           document.getElementById("Post_categoryFont").value=obj.PostCategoryFont;
+          document.getElementById("Post_categoryFontIOS").value=obj.PostCategoryFontIOS;
       }
     });
    });

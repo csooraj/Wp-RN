@@ -28,7 +28,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Label Font Family</label>
+                  <label for="sel1">Label Font Family Android</label>
                   <select class="form-control" id="labelfont">
                     <option>normal</option>
                     <option>notoserif</option>
@@ -40,6 +40,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Label Font Family IOS</label>
+                  <select class="form-control" id="labelfontIos">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -106,6 +130,7 @@
 <script>
   $(document).ready(function(){
     var appname = $.cookie("appname");
+    $('#myid5').addClass('active');
     document.getElementById("nameapp").innerHTML = appname;
     $.getJSON("https://wp-react.firebaseio.com/"+appname+"/SideBar.json", function(result){
       var obj = result;
@@ -116,6 +141,7 @@
           $("#Menu_accordioncolor").val(obj.MenuAccordionColor); $("#Menu_accordioncolor").trigger('change');
           $("#Menu_bordercolor").val(obj.MenuBorderColor); $("#Menu_bordercolor").trigger('change');
           document.getElementById("labelfont").value=obj.MenuFontFamily;
+          document.getElementById("labelfontIos").value=obj.MenuFontFamilyIos;
       }
     });
    });

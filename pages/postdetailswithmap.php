@@ -44,6 +44,30 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Post Title Font Family IOS:</label>
+                  <select class="form-control" id="Post_titleFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label>Post Date Color</label>
                   <div class="input-group my-colorpicker2">
                     <input id="Post_dateColor" type="text" class="form-control" placeholder="Click on right side button to select color">
@@ -68,6 +92,30 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Post Author Font Family IOS:</label>
+                  <select class="form-control" id="Post_authorFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label>Post Category Color</label>
                   <div class="input-group my-colorpicker2">
                     <input id="Post_categoryColor" type="text" class="form-control" placeholder="Click on right side button to select color">
@@ -89,6 +137,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Post Category Font Family IOS:</label>
+                  <select class="form-control" id="Post_categoryFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -121,6 +193,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Post Content Font Family IOS:</label>
+                  <select class="form-control" id="Post_contentFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -157,6 +253,30 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Comment Button Font Family IOS:</label>
+                  <select class="form-control" id="Post_commentFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label>Comment Button Text Size</label>
                   <input id="Post_commentSize" type="number" class="form-control">
                 </div>
@@ -188,25 +308,31 @@
   <script>
     $(document).ready(function(){
       var appname = $.cookie("appname");
+      $('#myid16').addClass('active');
       document.getElementById("nameapp").innerHTML = appname;
       $.getJSON("https://wp-react.firebaseio.com/"+appname+"/PostDetailsWithMap.json", function(result){
         var obj = result;
         if(obj.PostTitleSize!==undefined){
-          document.getElementById("Post_commentFont").value = obj.PostCommentFont;
-          document.getElementById("Post_commentSize").value = obj.PostCommentSize;
           document.getElementById("Post_titleSize").value = obj.PostTitleSize;
           document.getElementById("Post_titleFont").value = obj.PostTitleFont;
+          document.getElementById("Post_titleFontIOS").value = obj.PostTitleFontIOS;
+          $("#Post_titleColor").val(obj.PostTitleColor); $("#Post_titleColor").trigger('change');
           $("#Post_commentColor").val(obj.PostCommentColor); $("#Post_commentColor").trigger('change');
           $("#Post_commentTextColor").val(obj.PostCommentTextColor); $("#Post_commentTextColor").trigger('change');
-          $("#Post_titleColor").val(obj.PostTitleColor); $("#Post_titleColor").trigger('change');
           $("#Post_dateColor").val(obj.PostDateColor); $("#Post_dateColor").trigger('change');
           $("#Post_categoryColor").val(obj.PostCategoryColor); $("#Post_categoryColor").trigger('change');
           $("#Post_contentColor").val(obj.PostContentColor); $("#Post_contentColor").trigger('change');
           document.getElementById("Post_authorFont").value=obj.PostAuthorFont;
+          document.getElementById("Post_authorFontIOS").value=obj.PostAuthorFontIOS;
+          document.getElementById("Post_commentSize").value=obj.PostCommentSize;
+          document.getElementById("Post_commentFont").value=obj.PostCommentFont;
+          document.getElementById("Post_commentFontIOS").value=obj.PostCommentFontIOS;
           document.getElementById("Post_categorySize").value=obj.PostCategorySize;
           document.getElementById("Post_categoryFont").value=obj.PostCategoryFont;
+          document.getElementById("Post_categoryFontIOS").value=obj.PostCategoryFontIOS;
           document.getElementById("Post_contentSize").value=obj.PostContentSize;
           document.getElementById("Post_contentFont").value=obj.PostContentFont;
+          document.getElementById("Post_contentFontIOS").value=obj.PostContentFontIOS;
         }
       });
      });

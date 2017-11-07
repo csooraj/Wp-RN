@@ -4,8 +4,10 @@ function UploadGalleryView() {
   let Tabbar_Bg = document.getElementById("Tabbar_Bg").value;
   let Tabbar_textColor = document.getElementById("Tabbar_textColor").value;
   let Tabbar_borderColor = document.getElementById("Tabbar_borderColor").value;
-  let e1 = document.getElementById("Tabbar_Font");
+  let e1 = document.getElementById("TabBar_Font");
   let Tabbar_font = e1.options[e1.selectedIndex].text;
+  let e2 = document.getElementById("TabBar_FontIOS");
+  let Tabbar_fontIOS = e2.options[e2.selectedIndex].text;
   let Tabbar_textSize = document.getElementById("Tabbar_textSize").value;
 
   if ((Tabbar_Bg !== '') && (Tabbar_textColor !== '') && (Tabbar_borderColor !== '') && (Tabbar_font !== '') && (Tabbar_textSize !== '')) {
@@ -15,6 +17,7 @@ function UploadGalleryView() {
         "TabBarTextColor": Tabbar_textColor,
         "TabBarBorderColor": Tabbar_borderColor,
         "TabBarFont": Tabbar_font,
+        "TabBarFontIOS": Tabbar_fontIOS,
         "TabBarTextSize": Tabbar_textSize,
       };
     firebase.database().ref("Test/Gallery").update(data, function(error) {

@@ -44,6 +44,30 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Change Profile Pic Title Font Family IOS:</label>
+                  <select class="form-control" id="EditProfile_cpFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label>Change Profile Pic Title Color</label>
                   <div class="input-group my-colorpicker2">
                     <input id="EditProfile_cpTitleColor" type="text" class="form-control" placeholder="Click on right side button to select color">
@@ -68,6 +92,30 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Form Label Font Family IOS:</label>
+                  <select class="form-control" id="EditProfile_formLabelFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label>Form Label Color</label>
                   <div class="input-group my-colorpicker2">
                     <input id="EditProfile_formColor" type="text" class="form-control" placeholder="Click on right side button to select color">
@@ -89,6 +137,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Submit Button Font Family IOS:</label>
+                  <select class="form-control" id="EditProfile_submitFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -150,13 +222,17 @@
   <script>
     $(document).ready(function(){
       var appname = $.cookie("appname");
+      $('#myid13').addClass('active');
       document.getElementById("nameapp").innerHTML = appname;
       $.getJSON("https://wp-react.firebaseio.com/"+appname+"/EditProfile.json", function(result){
         var obj = result;
         if(obj.EditProfileChangePicTitleFont!==undefined){
-          document.getElementById("EditProfile_cpFont").text = obj.EditProfileChangePicTitleFont;
-          document.getElementById("EditProfile_formLabelFont").text = obj.EditProfileFormLabelFont;
+          document.getElementById("EditProfile_cpFont").value = obj.EditProfileChangePicTitleFont;
+          document.getElementById("EditProfile_cpFontIOS").value = obj.EditProfileChangePicTitleFontIOS;
+          document.getElementById("EditProfile_formLabelFont").value = obj.EditProfileFormLabelFont;
+          document.getElementById("EditProfile_formLabelFontIOS").value = obj.EditProfileFormLabelFontIOS;
           document.getElementById("EditProfile_submitFont").value = obj.EditProfileSubmitButtonTextFont;
+          document.getElementById("EditProfile_submitFontIOS").value = obj.EditProfileSubmitButtonTextFontIOS;
           document.getElementById("EditProfile_cpSize").value = obj.EditProfileChangePicFontSize;
           document.getElementById("EditProfile_submitTextSize").value = obj.EditProfileSubmitButtonTextSize;
           $("#EditProfile_cpBg").val(obj.EditProfileChangePicTitleColor); $("#EditProfile_cpBg").trigger('change');

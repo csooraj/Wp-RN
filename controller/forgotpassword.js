@@ -5,6 +5,14 @@ function UploadForgetPassword() {
   let database = firebase.database();
   let forget_bg = document.getElementById('fileUpload');
   let file1 = forget_bg.files[0];
+  let e1 = document.getElementById("title_Font");
+  let forget_titlefontFamily = e1.options[e1.selectedIndex].text;
+  let e2 = document.getElementById("title_FontIOS");
+  let forget_titlefontFamilyIOS = e2.options[e2.selectedIndex].text;
+  let e3 = document.getElementById("label_Font");
+  let forget_labelfontFamily = e3.options[e3.selectedIndex].text;
+  let e4 = document.getElementById("label_FontIOS");
+  let forget_labelfontFamilyIOS = e4.options[e4.selectedIndex].text;
   let forget_titleColor = document.getElementById("titlecolor").value;
   let forget_titleSize = document.getElementById("titlesize").value;
   let forget_descriptionColor = document.getElementById("descriptioncolor").value;
@@ -21,6 +29,10 @@ function UploadForgetPassword() {
       var data = {
         "ForgetInputColor": forget_inputBgColor,
         "ForgetBackLabelColor": forget_backLabelColor,
+        "ForgetTitleFont" : forget_titlefontFamily,
+        "ForgetTitleFontIos": forget_titlefontFamilyIOS,
+        "ForgetLabelFontFamily": forget_labelfontFamily,
+        "ForgetLabelFontFamilyIos": forget_labelfontFamilyIOS,
         "ForgetBackLabelSize": forget_backLabelSize,
         "ForgetButtonColor": forget_buttonColor,
         "ForgetButtonTextSize": forget_buttonTextSize,
@@ -34,6 +46,10 @@ function UploadForgetPassword() {
       var data = {
         "ForgetBgUrl": file1.name,
         "ForgetInputColor": forget_inputBgColor,
+        "ForgetTitleFont" : forget_titlefontFamily,
+        "ForgetTitleFontIos": forget_titlefontFamilyIOS,
+        "ForgetLabelFontFamily": forget_labelfontFamily,
+        "ForgetLabelFontFamilyIos": forget_labelfontFamilyIOS,
         "ForgetBackLabelColor": forget_backLabelColor,
         "ForgetBackLabelSize": forget_backLabelSize,
         "ForgetButtonColor": forget_buttonColor,

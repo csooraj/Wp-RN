@@ -28,7 +28,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Select Category Title Font Family:</label>
+                  <label for="sel1">Select Category Title Font Family Android:</label>
                   <select class="form-control" id="Menu_fontFamily">
                     <option>normal</option>
                     <option>notoserif</option>
@@ -40,6 +40,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Select Category Title Font Family IOS:</label>
+                  <select class="form-control" id="Menu_fontFamilyIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -70,11 +94,13 @@
 <script>
   $(document).ready(function(){
     var appname = $.cookie("appname");
+    $('#myid9').addClass('active');
     document.getElementById("nameapp").innerHTML = appname;
     $.getJSON("https://wp-react.firebaseio.com/"+appname+"/CategoryGrid.json", function(result){
       var obj = result;
       if(obj.CategoryTextColor!==undefined){
           document.getElementById("Menu_fontFamily").value=obj.CategoryTextFontFamily;
+          document.getElementById("Menu_fontFamilyIOS").value=obj.CategoryTextFontFamilyIOS;
           $("#Menu_textcolor").val(obj.CategoryTextColor); $("#Menu_textcolor").trigger('change');
       }
     });

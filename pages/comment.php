@@ -35,6 +35,30 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Username Font Family IOS:</label>
+                  <select class="form-control" id="EditProfile_cpFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label>Username Title Color</label>
                   <div class="input-group my-colorpicker2">
                     <input id="EditProfile_cpTitleColor" type="text" class="form-control" placeholder="Click on right side button to select color">
@@ -56,6 +80,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Comment Text Font Family IOS:</label>
+                  <select class="form-control" id="EditProfile_sbFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -83,6 +131,30 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Comment Time Label Family IOS:</label>
+                  <select class="form-control" id="EditProfile_timeLabelFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label>Comment Time Label Color</label>
                   <div class="input-group my-colorpicker2">
                     <input id="EditProfile_formColor" type="text" class="form-control" placeholder="Click on right side button to select color">
@@ -104,6 +176,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Comment Button Text Font Family IOS:</label>
+                  <select class="form-control" id="EditProfile_submitFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -165,15 +261,21 @@
   <script>
     $(document).ready(function(){
       var appname = $.cookie("appname");
+      $('#myid14').addClass('active');
       document.getElementById("nameapp").innerHTML = appname;
       $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Comment.json", function(result){
         var obj = result;
         if(obj.UserNameFontFamily!==undefined){
-          document.getElementById("EditProfile_cpFont").text = obj.UserNameFontFamily;
+          document.getElementById("EditProfile_sbFont").value = obj.CommentTitleFont;
+          document.getElementById("EditProfile_sbFontIOS").value = obj.CommentTitleFontIOS;
+          document.getElementById("EditProfile_cpFont").value = obj.UserNameFontFamily;
+          document.getElementById("EditProfile_cpFontIOS").value = obj.UserNameFontFamilyIOS;
           document.getElementById("EditProfile_submitFont").value = obj.CommentButtonTextFont;
+          document.getElementById("EditProfile_submitFontIOS").value = obj.CommentButtonTextFontIOS;
           document.getElementById("EditProfile_cpSize").value = obj.UserNameFontSize;
           document.getElementById("EditProfile_submitTextSize").value = obj.CommentButtonTextSize;
           document.getElementById("EditProfile_timeLabelFont").value = obj.CommentTimeLabelFont;
+          document.getElementById("EditProfile_timeLabelFontIOS").value = obj.CommentTimeLabelFontIOS;
           $("#EditProfile_sbTitleColor").val(obj.CommentTitleColor); $("#EditProfile_sbTitleColor").trigger('change');
           $("#EditProfile_formBorderColor").val(obj.CommentTileBorderColor); $("#EditProfile_formBorderColor").trigger('change');
           $("#EditProfile_cpTitleColor").val(obj.UserNameTextColor); $("#EditProfile_cpTitleColor").trigger('change');

@@ -8,9 +8,9 @@ function UploadPostArchiveDetails() {
   let PostArchive_calArrowcolor = document.getElementById("PostArchive_calArrowcolor").value;
   let PostArchive_calWeekcolor = document.getElementById("PostArchive_calWeekcolor").value;
   let PostArchive_calMonthcolor = document.getElementById("PostArchive_calMonthcolor").value;
-  let e2 = document.getElementById("Post_titleFont");
+  let e2 = document.getElementById("Post_categoryFont");
   let Post_categoryfontFamily = e2.options[e2.selectedIndex].text;
-  let e4 = document.getElementById("Post_categoryFont");
+  let e4 = document.getElementById("Post_titleFont");
   let Post_titlefontFamily = e4.options[e4.selectedIndex].text;
   var e3 = document.getElementById("Post_authorFont");
   let Post_authorFont = e3.options[e3.selectedIndex].text;
@@ -20,6 +20,16 @@ function UploadPostArchiveDetails() {
   let Post_calDayFont = e6.options[e6.selectedIndex].text;
   var e7 = document.getElementById("Post_calMonthFont");
   let Post_calMonthFont = e7.options[e7.selectedIndex].text;
+  let e8 = document.getElementById("Post_titleFontIOS");
+  let Post_categoryfontFamilyIOS = e8.options[e8.selectedIndex].text;
+  let e9 = document.getElementById("Post_categoryFontIOS");
+  let Post_titlefontFamilyIOS = e9.options[e9.selectedIndex].text;
+  var e10 = document.getElementById("Post_authorFontIOS");
+  let Post_authorFontIOS = e10.options[e10.selectedIndex].text;
+  var e12 = document.getElementById("Post_calDayFontIOS");
+  let Post_calDayFontIOS = e12.options[e12.selectedIndex].text;
+  var e13 = document.getElementById("Post_calMonthFontIOS");
+  let Post_calMonthFontIOS = e13.options[e13.selectedIndex].text;
 
 
   if ((PostArchive_subtitlecolor !== '') && ( PostArchive_titlecolor!== '') && (PostArchive_categorycolor !== '')) {
@@ -32,12 +42,17 @@ function UploadPostArchiveDetails() {
         "PostAuthorFont": Post_authorFont,
         "PostLayout": Post_layoutfontFamily,
         "PostCategoryFont": Post_categoryfontFamily,
+        "PostTitleFontFamilyIOS": Post_titlefontFamilyIOS,
+        "PostAuthorFontIOS": Post_authorFontIOS,
+        "PostCategoryFontIOS": Post_categoryfontFamilyIOS,
         "CalendarDayColor": PostArchive_calDaycolor,
         "CalendarArrowColor": PostArchive_calArrowcolor,
         "CalendarWeekColor": PostArchive_calWeekcolor,
         "CalendarMonthColor": PostArchive_calMonthcolor,
         "CalendarDayFont": Post_calDayFont,
         "CalendarMonthFont": Post_calMonthFont,
+        "CalendarDayFontIOS": Post_calDayFontIOS,
+        "CalendarMonthFontIOS": Post_calMonthFontIOS,
       };
     firebase.database().ref("Test/PostList").update(data, function(error) {
       if (error !== null) {

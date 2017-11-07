@@ -25,7 +25,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Search Input Placeholder Font Family:</label>
+                  <label for="sel1">Search Input Placeholder Font Family Android:</label>
                   <select class="form-control" id="Search_placeFont">
                     <option>normal</option>
                     <option>notoserif</option>
@@ -40,6 +40,30 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Search Input Placeholder Font Family IOS:</label>
+                  <select class="form-control" id="Search_placeFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label>Delete Button Text Color</label>
                   <div class="input-group my-colorpicker2">
                     <input id="Search_deleteButtonColor" type="text" class="form-control" placeholder="Click on right side button to select color">
@@ -49,7 +73,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Delete Button Text Font Family </label>
+                  <label for="sel1">Delete Button Text Font Family Android </label>
                   <select class="form-control" id="Search_deleteButtonFont">
                     <option>normal</option>
                     <option>notoserif</option>
@@ -64,6 +88,30 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Delete Button Text Font Family IOS </label>
+                  <select class="form-control" id="Search_deleteButtonFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label>Search Header Background Color</label>
                   <div class="input-group my-colorpicker2">
                     <input id="Search_headerColor" type="text" class="form-control" placeholder="Click on right side button to select color">
@@ -73,7 +121,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Latest Search Font Family</label>
+                  <label for="sel1">Latest Search Font Family Android:</label>
                   <select class="form-control" id="Search_latestFont">
                     <option>normal</option>
                     <option>notoserif</option>
@@ -85,6 +133,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Latest Search Font Family IOS:</label>
+                  <select class="form-control" id="Search_latestFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -128,7 +200,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Search Item Font Family</label>
+                  <label for="sel1">Search Item Font Family Android</label>
                   <select class="form-control" id="Search_itemFont">
                     <option>normal</option>
                     <option>notoserif</option>
@@ -140,6 +212,30 @@
                     <option>serif</option>
                     <option>Roboto</option>
                     <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Search Item Font Family IOS</label>
+                  <select class="form-control" id="Search_itemFontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -170,12 +266,17 @@
   <script>
     $(document).ready(function(){
       var appname = $.cookie("appname");
+      $('#myid11').addClass('active');
       document.getElementById("nameapp").innerHTML = appname;
       $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Search.json", function(result){
         var obj = result;
         if(obj.SearchPlaceholderFont!==undefined){
           document.getElementById("Search_placeFont").text = obj.SearchPlaceholderFont;
+          document.getElementById("Search_placeFontIOS").value = obj.SearchPlaceholderFontIOS;
+          document.getElementById("Search_latestFontIOS").value = obj.SearchLatestFontIOS;
+          document.getElementById("Search_itemFontIOS").value = obj.SearchItemFontIOS;
           document.getElementById("Search_deleteButtonFont").text = obj.SearchDeleteButtonFont;
+          document.getElementById("Search_deleteButtonFontIOS").value = obj.SearchDeleteButtonFontIOS;
           document.getElementById("Search_itemFont").value = obj.SearchItemFont;
           document.getElementById("Search_latestFont").value = obj.SearchLatestFont;
           document.getElementById("Search_latestSize").value = obj.SearchLatestSize;

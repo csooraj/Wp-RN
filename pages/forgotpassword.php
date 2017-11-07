@@ -25,10 +25,82 @@
                   <input id="titlesize" type="number" class="form-control">
                 </div>
                 <div class="form-group">
-                  <label>Title Font Family</label>
-                  <div class="form-group">
-                    <input id="titlefont" type="text" class="form-control" placeholder="Enter name of the fontfamily">
-                  </div>
+                  <label for="sel1">Select Description Font Family Android:</label>
+                  <select class="form-control" id="title_Font">
+                    <option>normal</option>
+                    <option>notoserif</option>
+                    <option>sans-serif</option>
+                    <option>sans-serif-light</option>
+                    <option>sans-serif-thin</option>
+                    <option>sans-serif-condensed</option>
+                    <option>sans-serif-medium</option>
+                    <option>serif</option>
+                    <option>Roboto</option>
+                    <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Select Description Font Family iOS:</label>
+                  <select class="form-control" id="title_FontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Select Button Label Font Family Android:</label>
+                  <select class="form-control" id="label_Font">
+                    <option>normal</option>
+                    <option>notoserif</option>
+                    <option>sans-serif</option>
+                    <option>sans-serif-light</option>
+                    <option>sans-serif-thin</option>
+                    <option>sans-serif-condensed</option>
+                    <option>sans-serif-medium</option>
+                    <option>serif</option>
+                    <option>Roboto</option>
+                    <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Select Button Label Font Family iOS:</label>
+                  <select class="form-control" id="label_FontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
                 </div>
                 <div class="form-group">
                   <label>Title Color</label>
@@ -37,12 +109,6 @@
                     <div class="input-group-addon">
                       <i></i>
                     </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Lablel Font Family</label>
-                  <div class="form-group">
-                    <input id="labelfont" type="text" class="form-control" placeholder="Enter name of the fontfamily">
                   </div>
                 </div>
                 <div class="form-group">
@@ -129,6 +195,7 @@
   </body>
   <script>
     $(document).ready(function(){
+      $('#myid4').addClass('active');
       var appname = $.cookie("appname");
       document.getElementById("nameapp").innerHTML = appname;
       $.getJSON("https://wp-react.firebaseio.com/"+appname+"/ForgotPassword.json", function(result){
@@ -137,6 +204,10 @@
             var backgroundurl = "https://wp-reactdemo.s3.ap-south-1.amazonaws.com/Assets/"+obj.ForgetBgUrl;
             document.getElementById("image").src=backgroundurl;
             document.getElementById("titlesize").value=obj.ForgetTitleSize;
+            document.getElementById("title_Font").value=obj.ForgetTitleFont;
+            document.getElementById("title_FontIOS").value=obj.ForgetTitleFontIos;
+            document.getElementById("label_Font").value=obj.ForgetLabelFontFamily;
+            document.getElementById("label_FontIOS").value=obj.ForgetLabelFontFamilyIos;
             document.getElementById("descriptionsize").value=obj.ForgetDescSize;
             document.getElementById("emailbuttonlabelsize").value=obj.ForgetButtonTextSize;
             document.getElementById("backbuttontextsize").value=obj.ForgetBackLabelSize;

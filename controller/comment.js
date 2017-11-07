@@ -12,28 +12,36 @@ function UploadCommentDetails() {
 
   let e1 = document.getElementById("EditProfile_cpFont");
   let EditProfile_cpFont = e1.options[e1.selectedIndex].text;
+  let EditProfile_cpFontIOS = document.getElementById("EditProfile_cpFontIOS").value;
 
   let e4 = document.getElementById("EditProfile_sbFont");
   let EditProfile_sbFont = e4.options[e4.selectedIndex].text;
+  let EditProfile_sbFontIOS = document.getElementById("EditProfile_sbFontIOS").value;
 
   let e2 = document.getElementById("EditProfile_timeLabelFont");
   let EditProfile_formLabelFont = e2.options[e2.selectedIndex].text;
+  let EditProfile_formLabelFontIOS = document.getElementById("EditProfile_timeLabelFontIOS").value;
 
   let e3 = document.getElementById("EditProfile_submitFont");
   let EditProfile_submitFont = e3.options[e3.selectedIndex].text;
+  let EditProfile_submitFontIOS = document.getElementById("EditProfile_submitFontIOS").value;
 
   if ((EditProfile_cpSize !== '') && (EditProfile_cpTitleColor !== '') && (EditProfile_submitTextSize  !== '')) {
     document.getElementById("Error").innerHTML = "";
       var data = {
         "UserNameFontSize": EditProfile_cpSize,
         "UserNameFontFamily": EditProfile_cpFont,
+        "UserNameFontFamilyIOS": EditProfile_cpFontIOS,
         "UserNameTextColor": EditProfile_cpTitleColor,
         "CommentTitleFont": EditProfile_sbFont,
+        "CommentTitleFontIOS": EditProfile_sbFontIOS,
         "CommentTitleColor": EditProfile_sbTitleColor,
         "CommentTimeLabelColor": EditProfile_formColor,
         "CommentTimeLabelFont": EditProfile_formLabelFont,
+        "CommentTimeLabelFontIOS": EditProfile_formLabelFontIOS,
         "CommentButtonTextSize": EditProfile_submitTextSize,
         "CommentButtonTextFont": EditProfile_submitFont,
+        "CommentButtonTextFontIOS": EditProfile_submitFontIOS,
         "CommentButtonTextColor": EditProfile_SubmitTextColor,
         "CommentButtonBg": EditProfile_submitBg,
         "CommentTileBorderColor": EditProfile_formBorderColor,

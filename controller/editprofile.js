@@ -12,12 +12,15 @@ function UploadEditProfileDetails() {
 
   let e1 = document.getElementById("EditProfile_cpFont");
   let EditProfile_cpFont = e1.options[e1.selectedIndex].text;
+  let EditProfile_cpFontIOS = document.getElementById("EditProfile_cpFontIOS").value;
 
   let e2 = document.getElementById("EditProfile_formLabelFont");
   let EditProfile_formLabelFont = e2.options[e2.selectedIndex].text;
+  let EditProfile_formLabelFontIOS = document.getElementById("EditProfile_formLabelFontIOS").value;
 
   let e3 = document.getElementById("EditProfile_submitFont");
   let EditProfile_submitFont = e3.options[e3.selectedIndex].text;
+  let EditProfile_submitFontIOS = document.getElementById("EditProfile_submitFontIOS").value;
 
   if (( EditProfile_cpBg !== '') && (EditProfile_cpSize !== '') && (EditProfile_cpTitleColor !== '') && (EditProfile_submitTextSize  !== '')) {
     document.getElementById("Error").innerHTML = "";
@@ -26,11 +29,14 @@ function UploadEditProfileDetails() {
         "EditProfileChangePicFontSize": EditProfile_cpSize,
         "EditProfileChangePicTitleColor": EditProfile_cpTitleColor,
         "EditProfileChangePicTitleFont": EditProfile_cpFont,
+        "EditProfileChangePicTitleFontIOS": EditProfile_cpFontIOS,
         "EditProfileFormLabelColor": EditProfile_formColor,
         "EditProfileFormLabelFont": EditProfile_formLabelFont,
+        "EditProfileFormLabelFontIOS": EditProfile_formLabelFontIOS,
         "EditProfileSubmitButtonBgColor": EditProfile_submitBg,
         "EditProfileSubmitButtonTextSize": EditProfile_submitTextSize,
         "EditProfileSubmitButtonTextFont": EditProfile_submitFont,
+        "EditProfileSubmitButtonTextFontIOS": EditProfile_submitFontIOS,
         "EditProfileSubmitButtonTextColor": EditProfile_SubmitTextColor,
 
       };

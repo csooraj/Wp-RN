@@ -52,6 +52,30 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Sub Title Font Family iOS:</label>
+                  <select class="form-control" id="CatArchive_fontFamilyIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <a class="btn btn-app" onClick="UploadCategoryArchiveDetails()">
                     <i class="fa fa-save"></i> Save
                   </a>
@@ -79,11 +103,13 @@
 <script>
   $(document).ready(function(){
     var appname = $.cookie("appname");
+    $('#myid8').addClass('active');
     document.getElementById("nameapp").innerHTML = appname;
     $.getJSON("https://wp-react.firebaseio.com/"+appname+"/CategoryArchive.json", function(result){
       var obj = result;
       if(obj.CategoryArchiveTitleColor!==undefined){
           document.getElementById("CatArchive_fontFamily").value=obj.CategoryArchiveFont;
+          document.getElementById("CatArchive_fontFamilyIOS").value=obj.CategoryArchiveFontIOS;
           $("#CatArchive_titlecolor").val(obj.CategoryArchiveTitleColor); $("#CatArchive_titlecolor").trigger('change');
           $("#CatArchive_bordercolor").val(obj.CategoryArchiveBorderColor); $("#CatArchive_bordercolor").trigger('change');
       }
