@@ -15,6 +15,17 @@
           <li><a href="./index.php"><i class="fa fa-circle-o"></i>Editor Dashboard</a></li>
         </ul>
       </li>
+      <li class="active treeview" id="Url">
+        <a href="#">
+          <i class="fa fa-caret-square-o-down"></i><span>Configure Url</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu" id="templates">
+          <li id="myidla1"><a href="./appurl.php"><i class="fa fa-circle-o"></i>Enter App Url</a></li>
+        </ul>
+      </li>
       <li class="active treeview" id="downloads">
         <a href="./layout.php">
           <i class="fa fa-caret-square-o-down"></i><span>Select Templates</span>

@@ -48,28 +48,28 @@
                   <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" id="layoutbutton" type="button" data-toggle="dropdown">Select Layout
                     <span class="caret"></span></button>
-                    <ul class="dropdown-menu" style="height: auto;max-height: 250px;overflow-x: hidden;">
+                    <ul class="dropdown-menu" style="height: auto;max-height: 416px;overflow-x: hidden;">
                       <li>
                         <a href="#" title="Layout1">
-                          <img src="http://www.101computing.net/wp/wp-content/uploads/HTML-Layout-3.png" style="height:200px;width:200px">
+                          <img src="../assets/layout1.jpg" style="height:416px;width:200px">
                           Layout1
                         </a>
                       </li>
                       <li>
                         <a href="#" title="Layout2">
-                          <img src="http://www.corelangs.com/html/tables/img/website-layout-2.png" style="height:200px;width:200px">
+                          <img src="../assets/layout2.jpg" style="height:416px;width:200px">
                           Layout2
                         </a>
                       </li>
                       <li>
                         <a href="#" title="Layout3">
-                          <img src="http://www.corelangs.com/html/tables/img/website-layout-3.png" style="height:200px;width:200px">
+                          <img src="../assets/layout3.jpg" style="height:416px;width:200px">
                           Layout3
                         </a>
                       </li>
                       <li>
                         <a href="#" title="Layout4">
-                          <img src="https://www.ibm.com/support/knowledgecenter/en/SSHRKX_8.5.0/help/images/WCM_6.jpg" style="height:200px;width:200px">
+                          <img src="../assets/layout4.jpg" style="height:416px;width:200px">
                           Layout4
                         </a>
                       </li>
@@ -84,9 +84,9 @@
                 <div id="submenu">
                 <?php include "panel.php"; ?>
                 </div>
-                <div class="form-group" id="clearchanges">
-                  <a class="btn btn-app">
-                  <i class="fa fa-save"></i> Click here to add new main menu item
+                <div class="form-group" >
+                  <a class="btn btn-app" id="clearchanges">
+                  <i class="fa fa-save" ></i> add new main menu item
                   </a>
                 </div>
                 <div class="form-group" id="preview">
