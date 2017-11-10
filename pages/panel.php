@@ -16,6 +16,11 @@
                             <option>Layout2</option>
                             <option>Layout3</option>
                             <option>Layout4</option>
+                            <option>Layout5</option>
+                            <option>Layout6</option>
+                            <option>Layout7</option>
+                            <option>Layout8</option>
+                            <option>Layout9</option>
                           </select>
                         </div>
                       </span>

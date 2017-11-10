@@ -73,6 +73,36 @@
                           Layout4
                         </a>
                       </li>
+                      <li>
+                        <a href="#" title="Layout5">
+                          <img src="../assets/layout5.png" style="height:416px;width:200px">
+                          Layout5
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="Layout6">
+                          <img src="../assets/layout6.png" style="height:416px;width:200px">
+                          Layout6
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="Layout7">
+                          <img src="../assets/layout7.png" style="height:416px;width:200px">
+                          Layout7
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="Layout8">
+                          <img src="../assets/layout8.png" style="height:416px;width:200px">
+                          Layout8
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="Layout9">
+                          <img src="../assets/layout9.png" style="height:416px;width:200px">
+                          Layout9
+                        </a>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -157,6 +187,11 @@
                       <option>Layout2</option>
                       <option>Layout3</option>
                       <option>Layout4</option>
+                      <option>Layout5</option>
+                      <option>Layout6</option>
+                      <option>Layout7</option>
+                      <option>Layout8</option>
+                      <option>Layout9</option>
                     </select>
                   </div>
                 </form>

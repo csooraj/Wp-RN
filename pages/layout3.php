@@ -15,7 +15,7 @@
           <div class="col-md-6">
             <div class="box box-info">
               <div class="box-header">
-                <h3 class="box-title">Configure Home Screen</h3>
+                <h3 class="box-title" id="box-title">Configure Layout3</h3>
               </div>
               <div class="box-body">
                 <div class="form-group">
@@ -255,9 +255,11 @@
 </body>
 <script>
   $(document).ready(function(){
+    document.getElementById("box-title").innerHTML="Configure Layout3 for "+$.cookie("menuitem")
     var appname = $.cookie("appname");
+    var menuitem = $.cookie("menuitem");
     $('#myid6').addClass('active');
-    $.getJSON("https://wp-react.firebaseio.com/"+appname+"/HomeScreen.json", function(result){
+    $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Layout3/"+menuitem+".json", function(result){
       var obj = result;
       if(obj.HomeHeaderColor!==undefined){
           $("#Home_headercolor").val(obj.HomeHeaderColor); $("#Home_headercolor").trigger('change');
@@ -278,5 +280,5 @@
     });
    });
 </script>
-<script src="../controller/homepage.js"></script>
+<script src="../controller/layout3.js"></script>
 </html>

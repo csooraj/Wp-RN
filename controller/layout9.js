@@ -1,5 +1,6 @@
 function UploadGalleryView() {
   let appname = $.cookie("appname");
+  let menuitem = $.cookie("menuitem");
   let database = firebase.database();
   let Tabbar_Bg = document.getElementById("Tabbar_Bg").value;
   let Tabbar_textColor = document.getElementById("Tabbar_textColor").value;
@@ -20,7 +21,7 @@ function UploadGalleryView() {
         "TabBarFontIOS": Tabbar_fontIOS,
         "TabBarTextSize": Tabbar_textSize,
       };
-    firebase.database().ref("Test/Gallery").update(data, function(error) {
+    firebase.database().ref("Test/Layout9/"+menuitem).update(data, function(error) {
       if (error !== null) {
         alert("Some Error Occured Try Again");
       } else {
@@ -29,7 +30,7 @@ function UploadGalleryView() {
         iframe.src = iframe.src;
       }
     });
-    firebase.database().ref(appname+"/Gallery").update(data, function(error) {
+    firebase.database().ref(appname+"/Layout9/"+menuitem).update(data, function(error) {
       if (error !== null) {
         alert("Some Error Occured Try Again");
       }

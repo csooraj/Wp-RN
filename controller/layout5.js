@@ -1,5 +1,6 @@
 function UploadCategoryArchiveDetails() {
   let appname = $.cookie("appname");
+  var menuitem = $.cookie("menuitem");
   let database = firebase.database();
   let CatArchive_titlecolor = document.getElementById("CatArchive_titlecolor").value;
   let CatArchive_bordercolor = document.getElementById("CatArchive_bordercolor").value;
@@ -18,7 +19,7 @@ function UploadCategoryArchiveDetails() {
         "CategoryArchiveFont": CatArchive_fontFamily,
         "CategoryArchiveFontIOS": CatArchive_fontFamilyIOS,
       };
-    firebase.database().ref("Test/CategoryArchive").update(data, function(error) {
+    firebase.database().ref("Test/Layout5/"+menuitem).update(data, function(error) {
       if (error !== null) {
         alert("Some Error Occured Try Again");
       } else {
@@ -27,7 +28,7 @@ function UploadCategoryArchiveDetails() {
         iframe.src = iframe.src;
       }
     });
-    firebase.database().ref(appname+"/CategoryArchive").update(data, function(error) {
+    firebase.database().ref(appname+"/Layout5/"+menuitem).update(data, function(error) {
       if (error !== null) {
         alert("Some Error Occured Try Again");
       }

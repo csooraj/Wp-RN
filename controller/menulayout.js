@@ -95,14 +95,14 @@ $(document).ready(function(){
   firebase.database().ref(appname+"/MenuItems/"+menuName).on('value', function(snapshot) {
          $("#test").empty();
     snapshot.forEach(function(entry) {
-         $("#test").append("<tr id="+entry.val().Name+"><td>"+entry.val().Name+"</td><td id="+entry.val().Name+"url"+">"+entry.val().Url+"</td><td id="+entry.val().Name+"layout"+">"+entry.val().Layout+"</td><td><button type=button class='btn btn-success' onclick=\"handleedit('" + entry.val().Name + "')\">EDIT</button></td><td><button type=button class='btn btn-danger' onclick=\"handledelete('" + entry.val().Name + "')\">DELETE</button></td></tr>");
+         $("#test").append("<tr id="+entry.val().Name+"><td>"+entry.val().Name+"</td><td id="+entry.val().Name+"url"+">"+entry.val().Url+"</td><td id="+entry.val().Name+"layout"+">"+entry.val().Layout+"</td><td><button type=button class='btn' onclick=\"handleConfigureLayout('" + entry.val().Layout+','+entry.val().Name+"')\">Configure Layout</button></td><td><button type=button class='btn btn-success' onclick=\"handleedit('" + entry.val().Name + "')\">EDIT</button></td><td><button type=button class='btn btn-danger' onclick=\"handledelete('" + entry.val().Name + "')\">DELETE</button></td></tr>");
          if(entry.val().ChildItems=== undefined){
            console.log("Do Nothing", entry.val().SubMenu);
          }else{
            console.log("Child Items", entry.val().SubMenu);
            entry.val().ChildItems.forEach(function(item, index) {
              console.log("The index is----->", index);
-             $('#'+entry.val().Name).append("<table class='table table-bordered bg-success'><thead><tr><th>Sub Menu Label</th><th>Sub Menu Url</th><th>Layout Selected</th></tr></thead><tr><td id="+item.Name+">"+item.Name+"</td><td id="+item.Url+">"+item.Url+"</td><td id="+item.Layout+">"+item.Layout+"</td><td><button type='button' class='btn btn-success' onclick=\"handleEditSubItems('" + item.Name +','+ item.Url+','+item.Layout+','+ entry.val().Name+','+index+ "')\">EDIT</button></td><td><button type='button' class='btn btn-danger' onclick=\"handleDeleteSubItems('"+entry.val().Name+','+index+ "')\">DELETE</button></td></tr></table>");
+             $('#'+entry.val().Name).append("<table class='table table-bordered bg-success'><thead><tr><th>Sub Menu Label</th><th>Sub Menu Url</th><th>Layout Selected</th></tr></thead><tr><td id="+item.Name+">"+item.Name+"</td><td id="+item.Url+">"+item.Url+"</td><td id="+item.Layout+"><button type=button class='btn' onclick=\"handleConfigureLayout('" + item.Layout+','+item.Name+"')\">Edit "+item.Layout+"</button><td><button type='button' class='btn btn-success' onclick=\"handleEditSubItems('" + item.Name +','+ item.Url+','+item.Layout+','+ entry.val().Name+','+index+ "')\">EDIT</button></td><td><button type='button' class='btn btn-danger' onclick=\"handleDeleteSubItems('"+entry.val().Name+','+index+ "')\">DELETE</button></td></tr></table>");
            });
          }
      });
@@ -111,6 +111,7 @@ $(document).ready(function(){
 
 
  function handleedit(entry){
+   $("html, body").animate({ scrollTop: 0 }, "slow");
    menuItems = [];
    $("#savechanges").show();
    $('#radioview').show();
@@ -119,6 +120,22 @@ $(document).ready(function(){
    document.getElementById("menu_url").value = document.getElementById ( entry+"url" ).innerText
    var menulayout = document.getElementById(entry+"layout").innerText;
    $('#layoutbutton').text(menulayout);
+ }
+
+ function handleConfigureLayout(entry){
+   var res = entry.split(",");
+   $.cookie("menuitem", res[1]);
+   var win = window.open('./'+res[0].toLowerCase()+'.php', '_blank');
+   win.focus();
+   //$(location).attr('href', './'+res[0].toLowerCase()+'.php');
+ }
+
+ function handleSubMenuConfigureLayout(entry){
+   var res = entry.split(",");
+   $.cookie("menuitem", res[1]);
+   var win = window.open('./'+res[0].toLowerCase()+'.php', '_blank');
+   win.focus();
+   //$(location).attr('href', './'+res[0].toLowerCase()+'.php');
  }
 
  function handledelete(entry){

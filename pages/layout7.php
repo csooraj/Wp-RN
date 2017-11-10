@@ -15,7 +15,7 @@
           <div class="col-md-6">
             <div class="box box-info">
               <div class="box-header">
-                <h3 class="box-title">Configure Post List</h3>
+                <h3 class="box-title" id="box-title"></h3>
               </div>
               <div class="box-body">
                 <div class="form-group">
@@ -163,13 +163,6 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Select Layout Type</label>
-                  <select class="form-control" id="Post_layoutType">
-                    <option>With Calendar</option>
-                    <option>Without Calendar</option>
-                  </select>
-                </div>
-                <div class="form-group">
                   <label>Calendar Day Color</label>
                   <div class="input-group my-colorpicker2">
                     <input id="PostArchive_calDaycolor" type="text" class="form-control" placeholder="Click on right side button to select color">
@@ -310,10 +303,12 @@
 </body>
 <script>
   $(document).ready(function(){
+    document.getElementById("box-title").innerHTML="Configure Layout7 for "+$.cookie("menuitem")
     var appname = $.cookie("appname");
+    var menuitem = $.cookie("menuitem");
     $('#myid17').addClass('active');
     document.getElementById("nameapp").innerHTML = appname;
-    $.getJSON("https://wp-react.firebaseio.com/"+appname+"/PostList.json", function(result){
+    $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Layout7/"+menuitem+".json", function(result){
       var obj = result;
       if(obj.PostArchiveTitleColor!==undefined){
           $("#PostArchive_subtitlecolor").val(obj.PostArchiveSubTitleColor); $("#PostArchive_subtitlecolor").trigger('change');
@@ -338,5 +333,5 @@
     });
    });
 </script>
-<script src="../controller/postlist.js"></script>
+<script src="../controller/layout7.js"></script>
 </html>

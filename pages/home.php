@@ -15,13 +15,157 @@
           <div class="col-md-6">
             <div class="box box-info">
               <div class="box-header">
-                <h3 class="box-title" id="box-title">Configure Layout1</h3>
+                <h3 class="box-title" id="box-title">Configure Layout3</h3>
               </div>
               <div class="box-body">
                 <div class="form-group">
-                  <label>Post Sub Title Color</label>
+                  <label>Header Background Color</label>
                   <div class="input-group my-colorpicker2">
-                    <input id="PostArchive_subtitlecolor" type="text" class="form-control" placeholder="Click on right side button to select color">
+                    <input id="Home_headercolor" type="text" class="form-control" placeholder="Click on right side button to select color">
+                    <div class="input-group-addon">
+                      <i></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Header Icon Color</label>
+                  <div class="input-group my-colorpicker2">
+                    <input id="Home_iconcolor" type="text" class="form-control" placeholder="Click on right side button to select color">
+                    <div class="input-group-addon">
+                      <i></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Slider Text Color</label>
+                  <div class="input-group my-colorpicker2">
+                    <input id="Home_slidertextcolor" type="text" class="form-control" placeholder="Click on right side button to select color">
+                    <div class="input-group-addon">
+                      <i></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Slider Text Font Family Android:</label>
+                  <select class="form-control" id="sliderfont">
+                    <option>normal</option>
+                    <option>notoserif</option>
+                    <option>sans-serif</option>
+                    <option>sans-serif-light</option>
+                    <option>sans-serif-thin</option>
+                    <option>sans-serif-condensed</option>
+                    <option>sans-serif-medium</option>
+                    <option>serif</option>
+                    <option>Roboto</option>
+                    <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Slider Text Font Family IOS:</label>
+                  <select class="form-control" id="sliderfontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Sub Title Font Family Android:</label>
+                  <select class="form-control" id="subtitlefont">
+                    <option>normal</option>
+                    <option>notoserif</option>
+                    <option>sans-serif</option>
+                    <option>sans-serif-light</option>
+                    <option>sans-serif-thin</option>
+                    <option>sans-serif-condensed</option>
+                    <option>sans-serif-medium</option>
+                    <option>serif</option>
+                    <option>Roboto</option>
+                    <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Sub Title Font Family iOS:</label>
+                  <select class="form-control" id="subtitlefontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Title Font Family Android:</label>
+                  <select class="form-control" id="titlefont">
+                    <option>normal</option>
+                    <option>notoserif</option>
+                    <option>sans-serif</option>
+                    <option>sans-serif-light</option>
+                    <option>sans-serif-thin</option>
+                    <option>sans-serif-condensed</option>
+                    <option>sans-serif-medium</option>
+                    <option>serif</option>
+                    <option>Roboto</option>
+                    <option>monospace</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Title Font Family iOS:</label>
+                  <select class="form-control" id="titlefontIOS">
+                    <option>San Francisco</option>
+                    <option>Academy Engraved LET</option>
+                    <option>AcademyEngravedLetPlain</option>
+                    <option>Al Nile</option>
+                    <option>AlNile-Bold</option>
+                    <option>Avenir-Heavy</option>
+                    <option>Avenir-HeavyOblique</option>
+                    <option>SinhalaSangamMN</option>
+                    <option>SinhalaSangamMN-Bold</option>
+                    <option>Snell Roundhand</option>
+                    <option>SnellRoundhand-Black</option>
+                    <option>SnellRoundhand-Bold</option>
+                    <option>Verdana</option>
+                    <option>Verdana-Bold</option>
+                    <option>Verdana-BoldItalic</option>
+                    <option>Verdana-Italic</option>
+                    <option>Zapf Dingbats</option>
+                    <option>ZapfDingbatsITC</option>
+                    <option>Zapfino</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Sub Title Color</label>
+                  <div class="input-group my-colorpicker2">
+                    <input id="Home_slidersubcolor" type="text" class="form-control" placeholder="Click on right side button to select color">
                     <div class="input-group-addon">
                       <i></i>
                     </div>
@@ -30,7 +174,7 @@
                 <div class="form-group">
                   <label>Post Title Color</label>
                   <div class="input-group my-colorpicker2">
-                    <input id="PostArchive_titlecolor" type="text" class="form-control" placeholder="Click on right side button to select color">
+                    <input id="Home_posttitlecolor" type="text" class="form-control" placeholder="Click on right side button to select color">
                     <div class="input-group-addon">
                       <i></i>
                     </div>
@@ -39,15 +183,15 @@
                 <div class="form-group">
                   <label>Category Text Color</label>
                   <div class="input-group my-colorpicker2">
-                    <input id="PostArchive_categorycolor" type="text" class="form-control" placeholder="Click on right side button to select color">
+                    <input id="Home_categorytextcolor" type="text" class="form-control" placeholder="Click on right side button to select color">
                     <div class="input-group-addon">
                       <i></i>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Post Title Font Family:</label>
-                  <select class="form-control" id="Post_titleFont">
+                  <label for="sel1">Category Font Family</label>
+                  <select class="form-control" id="categoryfont">
                     <option>normal</option>
                     <option>notoserif</option>
                     <option>sans-serif</option>
@@ -61,8 +205,8 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Post Title Font Family iOS:</label>
-                  <select class="form-control" id="Post_titleFontIOS">
+                  <label for="sel1">Category Font Family iOS:</label>
+                  <select class="form-control" id="categoryfontIOS">
                     <option>San Francisco</option>
                     <option>Academy Engraved LET</option>
                     <option>AcademyEngravedLetPlain</option>
@@ -85,135 +229,7 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Post SubTitle Font Family </label>
-                  <select class="form-control" id="Post_authorFont">
-                    <option>normal</option>
-                    <option>notoserif</option>
-                    <option>sans-serif</option>
-                    <option>sans-serif-light</option>
-                    <option>sans-serif-thin</option>
-                    <option>sans-serif-condensed</option>
-                    <option>sans-serif-medium</option>
-                    <option>serif</option>
-                    <option>Roboto</option>
-                    <option>monospace</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="sel1">Post SubTitle Font Family iOS:</label>
-                  <select class="form-control" id="Post_authorFontIOS">
-                    <option>San Francisco</option>
-                    <option>Academy Engraved LET</option>
-                    <option>AcademyEngravedLetPlain</option>
-                    <option>Al Nile</option>
-                    <option>AlNile-Bold</option>
-                    <option>Avenir-Heavy</option>
-                    <option>Avenir-HeavyOblique</option>
-                    <option>SinhalaSangamMN</option>
-                    <option>SinhalaSangamMN-Bold</option>
-                    <option>Snell Roundhand</option>
-                    <option>SnellRoundhand-Black</option>
-                    <option>SnellRoundhand-Bold</option>
-                    <option>Verdana</option>
-                    <option>Verdana-Bold</option>
-                    <option>Verdana-BoldItalic</option>
-                    <option>Verdana-Italic</option>
-                    <option>Zapf Dingbats</option>
-                    <option>ZapfDingbatsITC</option>
-                    <option>Zapfino</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="sel1">Post Category Font Family </label>
-                  <select class="form-control" id="Post_categoryFont">
-                    <option>normal</option>
-                    <option>notoserif</option>
-                    <option>sans-serif</option>
-                    <option>sans-serif-light</option>
-                    <option>sans-serif-thin</option>
-                    <option>sans-serif-condensed</option>
-                    <option>sans-serif-medium</option>
-                    <option>serif</option>
-                    <option>Roboto</option>
-                    <option>monospace</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="sel1">Post Category Font Family iOS:</label>
-                  <select class="form-control" id="Post_categoryFontIOS">
-                    <option>San Francisco</option>
-                    <option>Academy Engraved LET</option>
-                    <option>AcademyEngravedLetPlain</option>
-                    <option>Al Nile</option>
-                    <option>AlNile-Bold</option>
-                    <option>Avenir-Heavy</option>
-                    <option>Avenir-HeavyOblique</option>
-                    <option>SinhalaSangamMN</option>
-                    <option>SinhalaSangamMN-Bold</option>
-                    <option>Snell Roundhand</option>
-                    <option>SnellRoundhand-Black</option>
-                    <option>SnellRoundhand-Bold</option>
-                    <option>Verdana</option>
-                    <option>Verdana-Bold</option>
-                    <option>Verdana-BoldItalic</option>
-                    <option>Verdana-Italic</option>
-                    <option>Zapf Dingbats</option>
-                    <option>ZapfDingbatsITC</option>
-                    <option>Zapfino</option>
-                  </select>
-                </div>
-                <div id="thumbnail">
-                  <div class="form-group">
-                    <label>Category Title Color</label>
-                    <div class="input-group my-colorpicker2">
-                      <input id="PostArchive_imageTitleColor" type="text" class="form-control" placeholder="Click on right side button to select color">
-                      <div class="input-group-addon">
-                        <i></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="sel1">Category Title Font Family </label>
-                    <select class="form-control" id="Post_imageTitleFont">
-                      <option>normal</option>
-                      <option>notoserif</option>
-                      <option>sans-serif</option>
-                      <option>sans-serif-light</option>
-                      <option>sans-serif-thin</option>
-                      <option>sans-serif-condensed</option>
-                      <option>sans-serif-medium</option>
-                      <option>serif</option>
-                      <option>Roboto</option>
-                      <option>monospace</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="sel1">Category Title Font Family iOS:</label>
-                    <select class="form-control" id="Post_imageTitleFontIOS">
-                      <option>San Francisco</option>
-                      <option>Academy Engraved LET</option>
-                      <option>AcademyEngravedLetPlain</option>
-                      <option>Al Nile</option>
-                      <option>AlNile-Bold</option>
-                      <option>Avenir-Heavy</option>
-                      <option>Avenir-HeavyOblique</option>
-                      <option>SinhalaSangamMN</option>
-                      <option>SinhalaSangamMN-Bold</option>
-                      <option>Snell Roundhand</option>
-                      <option>SnellRoundhand-Black</option>
-                      <option>SnellRoundhand-Bold</option>
-                      <option>Verdana</option>
-                      <option>Verdana-Bold</option>
-                      <option>Verdana-BoldItalic</option>
-                      <option>Verdana-Italic</option>
-                      <option>Zapf Dingbats</option>
-                      <option>ZapfDingbatsITC</option>
-                      <option>Zapfino</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <a class="btn btn-app" onClick="UploadPostArchiveDetails()">
+                  <a class="btn btn-app" onClick="UploadSideBarDetails()">
                     <i class="fa fa-save"></i> Save
                   </a>
                   <a class="btn btn-app" onClick="ReloadPreview(1)">
@@ -239,29 +255,29 @@
 </body>
 <script>
   $(document).ready(function(){
-    document.getElementById("box-title").innerHTML="Configure Layout1 for "+$.cookie("menuitem")
+    document.getElementById("box-title").innerHTML="Configure Layout4 for "+$.cookie("menuitem")
     var appname = $.cookie("appname");
-    var menuname = $.cookie("menuitem");
-    $('#myid18').addClass('active');
-    document.getElementById("nameapp").innerHTML = appname;
-    $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Layout1/"+menuname+".json", function(result){
+    $('#myid6').addClass('active');
+    $.getJSON("https://wp-react.firebaseio.com/"+appname+"/HomeScreen.json", function(result){
       var obj = result;
-      if(obj.PostArchiveTitleColor!==undefined){
-          $("#PostArchive_imageTitleColor").val(obj.PostArchiveImageTitleColor); $("#PostArchive_imageTitleColor").trigger('change');
-          $("#PostArchive_subtitlecolor").val(obj.PostArchiveSubTitleColor); $("#PostArchive_subtitlecolor").trigger('change');
-          $("#PostArchive_titlecolor").val(obj.PostArchiveTitleColor); $("#PostArchive_titlecolor").trigger('change');
-          $("#PostArchive_categorycolor").val(obj.PostArchiveCategoryColor); $("#PostArchive_categorycolor").trigger('change');
-          document.getElementById("Post_authorFont").value=obj.PostAuthorFont;
-          document.getElementById("Post_authorFontIOS").value=obj.PostAuthorFontIOS;
-          document.getElementById("Post_imageTitleFont").value=obj.PostArchiveImageTitleFont;
-          document.getElementById("Post_imageTitleFontIOS").value=obj.PostArchiveImageTitleFontIOS;
-          document.getElementById("Post_titleFont").value=obj.PostTitleFontFamily;
-          document.getElementById("Post_titleFontIOS").value=obj.PostTitleFontFamilyIOS;
-          document.getElementById("Post_categoryFont").value=obj.PostCategoryFont;
-          document.getElementById("Post_categoryFontIOS").value=obj.PostCategoryFontIOS;
+      if(obj.HomeHeaderColor!==undefined){
+          $("#Home_headercolor").val(obj.HomeHeaderColor); $("#Home_headercolor").trigger('change');
+          $("#Home_iconcolor").val(obj.HomeIconColor); $("#Home_iconcolor").trigger('change');
+          $("#Home_slidertextcolor").val(obj.HomeSliderTextColor); $("#Home_slidertextcolor").trigger('change');
+          $("#Home_posttitlecolor").val(obj.HomePostTitleColor); $("#Home_posttitlecolor").trigger('change');
+          $("#Home_categorytextcolor").val(obj.HomeCategoryTextColor); $("#Home_categorytextcolor").trigger('change');
+          $("#Home_slidersubcolor").val(obj.HomeSliderSubTitleColor); $("#Home_slidersubcolor").trigger('change');
+          document.getElementById("sliderfont").value=obj.HomeSliderFont;
+          document.getElementById("sliderfontIOS").value=obj.HomeSliderFontIOS;
+          document.getElementById("subtitlefont").value=obj.HomeSubtitleFont;
+          document.getElementById("subtitlefontIOS").value=obj.HomeSubtitleFontIOS;
+          document.getElementById("titlefont").value=obj.HomeTitleFont;
+          document.getElementById("titlefontIOS").value=obj.HomeTitleFontIOS;
+          document.getElementById("categoryfont").value=obj.HomeCategoryFont;
+          document.getElementById("categoryfontIOS").value=obj.HomeCategoryFontIOS;
       }
     });
    });
 </script>
-<script src="../controller/layout1.js"></script>
+<script src="../controller/homepage.js"></script>
 </html>

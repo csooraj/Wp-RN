@@ -1,5 +1,6 @@
 function UploadPostArchiveDetails() {
   let appname = $.cookie("appname");
+  let menuitem = $.cookie("menuitem");
   let database = firebase.database();
   let PostArchive_subtitlecolor = document.getElementById("PostArchive_subtitlecolor").value;
   let PostArchive_titlecolor = document.getElementById("PostArchive_titlecolor").value;
@@ -14,8 +15,6 @@ function UploadPostArchiveDetails() {
   let Post_titlefontFamily = e4.options[e4.selectedIndex].text;
   var e3 = document.getElementById("Post_authorFont");
   let Post_authorFont = e3.options[e3.selectedIndex].text;
-  var e5 = document.getElementById("Post_layoutType");
-  let Post_layoutfontFamily = e5.options[e5.selectedIndex].text;
   var e6 = document.getElementById("Post_calDayFont");
   let Post_calDayFont = e6.options[e6.selectedIndex].text;
   var e7 = document.getElementById("Post_calMonthFont");
@@ -40,7 +39,6 @@ function UploadPostArchiveDetails() {
         "PostArchiveCategoryColor": PostArchive_categorycolor,
         "PostTitleFontFamily": Post_titlefontFamily,
         "PostAuthorFont": Post_authorFont,
-        "PostLayout": Post_layoutfontFamily,
         "PostCategoryFont": Post_categoryfontFamily,
         "PostTitleFontFamilyIOS": Post_titlefontFamilyIOS,
         "PostAuthorFontIOS": Post_authorFontIOS,
@@ -54,7 +52,7 @@ function UploadPostArchiveDetails() {
         "CalendarDayFontIOS": Post_calDayFontIOS,
         "CalendarMonthFontIOS": Post_calMonthFontIOS,
       };
-    firebase.database().ref("Test/PostList").update(data, function(error) {
+    firebase.database().ref("Test/Layout7/"+menuitem).update(data, function(error) {
       if (error !== null) {
         alert("Some Error Occured Try Again");
       } else {
@@ -63,7 +61,7 @@ function UploadPostArchiveDetails() {
         iframe.src = iframe.src;
       }
     });
-    firebase.database().ref(appname+"/PostList").update(data, function(error) {
+    firebase.database().ref(appname+"/Layout7/"+menuitem).update(data, function(error) {
       if (error !== null) {
         alert("Some Error Occured Try Again");
       }

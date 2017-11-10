@@ -15,21 +15,30 @@
           <div class="col-md-6">
             <div class="box box-info">
               <div class="box-header">
-                <h3 class="box-title">Configure Category Screen</h3>
+                <h3 class="box-title" id="box-title">Configure Category Archive</h3>
               </div>
               <div class="box-body">
                 <div class="form-group">
                   <label>Category Label Color</label>
                   <div class="input-group my-colorpicker2">
-                    <input id="Menu_textcolor" type="text" class="form-control" placeholder="Click on right side button to select color">
+                    <input id="CatArchive_titlecolor" type="text" class="form-control" placeholder="Click on right side button to select color">
                     <div class="input-group-addon">
                       <i></i>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Select Category Title Font Family Android:</label>
-                  <select class="form-control" id="Menu_fontFamily">
+                  <label>Border Color</label>
+                  <div class="input-group my-colorpicker2">
+                    <input id="CatArchive_bordercolor" type="text" class="form-control" placeholder="Click on right side button to select color">
+                    <div class="input-group-addon">
+                      <i></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Select Category Title Font Family:</label>
+                  <select class="form-control" id="CatArchive_fontFamily">
                     <option>normal</option>
                     <option>notoserif</option>
                     <option>sans-serif</option>
@@ -43,8 +52,8 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Select Category Title Font Family IOS:</label>
-                  <select class="form-control" id="Menu_fontFamilyIOS">
+                  <label for="sel1">Sub Title Font Family iOS:</label>
+                  <select class="form-control" id="CatArchive_fontFamilyIOS">
                     <option>San Francisco</option>
                     <option>Academy Engraved LET</option>
                     <option>AcademyEngravedLetPlain</option>
@@ -67,7 +76,7 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <a class="btn btn-app" onClick="UploadCategoryDetails()">
+                  <a class="btn btn-app" onClick="UploadCategoryArchiveDetails()">
                     <i class="fa fa-save"></i> Save
                   </a>
                   <a class="btn btn-app" onClick="ReloadPreview(1)">
@@ -93,18 +102,21 @@
 </body>
 <script>
   $(document).ready(function(){
+    document.getElementById("box-title").innerHTML="Configure Layout5 for "+$.cookie("menuitem")
     var appname = $.cookie("appname");
-    $('#myid9').addClass('active');
+    var menuitem = $.cookie("menuitem");
+    $('#myid8').addClass('active');
     document.getElementById("nameapp").innerHTML = appname;
-    $.getJSON("https://wp-react.firebaseio.com/"+appname+"/CategoryGrid.json", function(result){
+    $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Layout5/"+menuitem+".json", function(result){
       var obj = result;
-      if(obj.CategoryTextColor!==undefined){
-          document.getElementById("Menu_fontFamily").value=obj.CategoryTextFontFamily;
-          document.getElementById("Menu_fontFamilyIOS").value=obj.CategoryTextFontFamilyIOS;
-          $("#Menu_textcolor").val(obj.CategoryTextColor); $("#Menu_textcolor").trigger('change');
+      if(obj.CategoryArchiveTitleColor!==undefined){
+          document.getElementById("CatArchive_fontFamily").value=obj.CategoryArchiveFont;
+          document.getElementById("CatArchive_fontFamilyIOS").value=obj.CategoryArchiveFontIOS;
+          $("#CatArchive_titlecolor").val(obj.CategoryArchiveTitleColor); $("#CatArchive_titlecolor").trigger('change');
+          $("#CatArchive_bordercolor").val(obj.CategoryArchiveBorderColor); $("#CatArchive_bordercolor").trigger('change');
       }
     });
    });
 </script>
-<script src="../controller/category.js"></script>
+<script src="../controller/layout5.js"></script>
 </html>
