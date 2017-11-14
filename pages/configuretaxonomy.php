@@ -11,8 +11,8 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper" style="background-color:white">
       <section class="content">
-        <h2>Configure Custom Post Layouts</h2>
-        <p>Configure each custom post type view</p>
+        <h2>Configure Taxonomy Layouts</h2>
+        <p>Configure each Taxonomy view</p>
       <table class="table table-bordered bg-success">
         <thead>
           <tr>
@@ -31,6 +31,6 @@
       </section>
     </div>
     <?php include "footer.php"; ?>
-    <script src="../controller/configurecustompost.js"></script>
+    <script src="../controller/configuretaxonomy.js"></script>
 </body>
 </html>

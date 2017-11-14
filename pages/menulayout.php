@@ -30,81 +30,14 @@
                   <input type="text" class="form-control" id="menu_label">
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Select url to point</label>
-                  <select class="form-control" id="menu_url">
-                    <option value="" disabled selected>Select url to point</option>
-                    <option>www.google.com</option>
-                    <option>www.facebook.com</option>
-                    <option>www.twitter.com</option>
+                  <label for="sel1">Select View To Be Linked</label>
+                  <select class="form-control" id="screen_link">
                   </select>
                 </div>
                 <div class="form-group" id="savechanges">
-                  <a class="btn btn-app" onClick="">
+                  <a class="btn btn-app" onClick="UploadMenuDetails()">
                   <i class="fa fa-save"></i> Save Changes
                   </a>
-                </div>
-                <div class="form-group">
-                  <label for="sel1">Select layout</label>
-                  <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" id="layoutbutton" type="button" data-toggle="dropdown">Select Layout
-                    <span class="caret"></span></button>
-                    <ul class="dropdown-menu" style="height: auto;max-height: 416px;overflow-x: hidden;">
-                      <li>
-                        <a href="#" title="Layout1">
-                          <img src="../assets/layout1.jpg" style="height:416px;width:200px">
-                          Layout1
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" title="Layout2">
-                          <img src="../assets/layout2.jpg" style="height:416px;width:200px">
-                          Layout2
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" title="Layout3">
-                          <img src="../assets/layout3.jpg" style="height:416px;width:200px">
-                          Layout3
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" title="Layout4">
-                          <img src="../assets/layout4.jpg" style="height:416px;width:200px">
-                          Layout4
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" title="Layout5">
-                          <img src="../assets/layout5.png" style="height:416px;width:200px">
-                          Layout5
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" title="Layout6">
-                          <img src="../assets/layout6.png" style="height:416px;width:200px">
-                          Layout6
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" title="Layout7">
-                          <img src="../assets/layout7.png" style="height:416px;width:200px">
-                          Layout7
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" title="Layout8">
-                          <img src="../assets/layout8.png" style="height:416px;width:200px">
-                          Layout8
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" title="Layout9">
-                          <img src="../assets/layout9.png" style="height:416px;width:200px">
-                          Layout9
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
                 <div class="form-group" id="radioview">
                   <label for="pwd">Type</label>
@@ -116,7 +49,7 @@
                 </div>
                 <div class="form-group" >
                   <a class="btn btn-app" id="clearchanges">
-                  <i class="fa fa-save" ></i> add new main menu item
+                  <i class="fa fa-save" ></i> Add new main menu item
                   </a>
                 </div>
                 <div class="form-group" id="preview">
@@ -132,11 +65,14 @@
                 <table class="table table-bordered bg-success">
                   <thead>
                     <tr>
-                      <th>Main Menu Label</th>
-                      <th>Main Menu Url</th>
-                      <th>Layout Selected</th>
+                      <th>Menu Label</th>
+                      <th>Connected View</th>
+                      <th>Actions</th>
                     </tr>
                   </thead>
+                  <div id="loader">
+                    <image height="100px" width="100px" src="../assets/loader.gif" />
+                  </div>
                   <tbody id="test">
                   </tbody>
                 </table>
@@ -146,72 +82,22 @@
         </div>
       </section>
     </div>
-    <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <button type="button" class="close"
-                   data-dismiss="modal">
-                       <span aria-hidden="true">&times;</span>
-                       <span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title" id="MenuLabel">
-                </h4>
-                <h4 class="modal-title" id="subMenuLabel">
-                </h4>
-                <h4 class="modal-title" id="MenuId" style="display:none">
-                </h4>
-            </div>
-
-            <!-- Modal Body -->
-            <div class="modal-body">
-
-                <form role="form">
-                  <div class="form-group">
-                    <label for="usr">Label:</label>
-                    <input type="text" class="form-control" id="submenu_label">
-                  </div>
-                  <div class="form-group">
-                    <select class="form-control" id="subMenuUrl">
-                      <option value="" disabled selected>Select url to point</option>
-                      <option>www.google.com</option>
-                      <option>www.facebook.com</option>
-                      <option>www.twitter.com</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <select class="form-control" id="subMenuLayout" >
-                      <option>Layout1</option>
-                      <option>Layout2</option>
-                      <option>Layout3</option>
-                      <option>Layout4</option>
-                      <option>Layout5</option>
-                      <option>Layout6</option>
-                      <option>Layout7</option>
-                      <option>Layout8</option>
-                      <option>Layout9</option>
-                    </select>
-                  </div>
-                </form>
-            </div>
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default"
-                        data-dismiss="modal">
-                            Close
-                </button>
-                <button type="button" class="btn btn-primary" onclick="updateSubMenu()">
-                    Save changes
-                </button>
-            </div>
-        </div>
-    </div>
 </div>
 <?php include "footer.php"; ?>
 </body>
 <script src="../controller/panel.js"></script>
 <script src="../controller/menulayout.js"></script>
-<script src="../controller/handleedit.js"></script>
+<script>
+$(document).ready(function(){
+    $('#myidla1').addClass('active');
+    var appname = $.cookie("appname");
+    $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Screens/ScreenList.json", function(result){
+            $.each(result, function(i, field){
+              console.log("field", field)
+                $("#screen_link").append('<option value='+field+'>'+field+'</option>');
+                $("#submenulayout").append('<option value='+field+'>'+field+'</option>');
+            });
+    });
+  });
+</script>
 </html>

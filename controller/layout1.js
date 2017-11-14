@@ -37,16 +37,7 @@ function UploadPostArchiveDetails() {
         "PostCategoryFont": Post_categoryfontFamily,
         "PostCategoryFontIOS": Post_categoryfontFamilyIOS,
       };
-    let menuname = $.cookie("menuitem");
-    firebase.database().ref("Test/Layout1/"+menuname+"/").update(data, function(error) {
-      if (error !== null) {
-        alert("Some Error Occured Try Again");
-      } else {
-        document.getElementById("loading").innerHTML = 'Loading Preview...';
-        var iframe = document.getElementById('mine');
-        iframe.src = iframe.src;
-      }
-    });
+    let menuname = $.cookie("custompost");
     firebase.database().ref(appname+"/Layout1/"+menuname+"/").update(data, function(error) {
       if (error !== null) {
         alert("Some Error Occured Try Again");

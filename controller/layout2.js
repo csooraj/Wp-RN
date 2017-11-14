@@ -40,7 +40,7 @@ function UploadPostArchiveDetails() {
         "PostTabFontIOS": Post_TabTitleFontIOS,
         "PostTabBgColor": PostArchive_tabBgcolor,
       };
-    var menuname = $.cookie("menuitem");
+    var menuname = $.cookie("custompost");
     firebase.database().ref("Test/Layout2/"+menuname+"/").update(data, function(error) {
       if (error !== null) {
         alert("Some Error Occured Try Again");

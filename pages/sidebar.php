@@ -28,15 +28,15 @@
       </li>
       <li class="active treeview" id="downloads">
         <a href="./layout.php">
-          <i class="fa fa-caret-square-o-down"></i><span>Select Templates</span>
+          <i class="fa fa-caret-square-o-down"></i><span>Create Screens</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu" id="templates">
           <!--li id="myidla3"><a href="./basicscreens.php"><i class="fa fa-circle-o"></i>Default Views</a></li-->
-          <li id="myidla1"><a href="./layout.php"><i class="fa fa-circle-o"></i>Custom Post</a></li>
-          <li id="myidla2"><a href="./menulayout.php"><i class="fa fa-circle-o"></i>Menu Items</a></li>
+          <li id="myidla1"><a href="./routehandler.php"><i class="fa fa-circle-o"></i>Configure Screens</a></li>
+          <li id="myidla2"><a href="./menulayout.php"><i class="fa fa-circle-o"></i>Configure Menu Items</a></li>
         </ul>
       </li>
       <li class="active treeview" id="mymenu">
@@ -48,17 +48,18 @@
           </span>
         </a>
         <ul class="treeview-menu" id="menubar">
+          <li id="myid5"><a href="./configurepage.php"><i class="fa fa-circle-o"></i>Configure Page Screens</a></li>
+          <li id="myid6"><a href="./configurecustompost.php"><i class="fa fa-circle-o"></i>Configure Custom Post Screens</a></li>
+          <li id="myid7"><a href="./configuretaxonomy.php"><i class="fa fa-circle-o"></i>Configure Taxonomy Screens</a></li>
           <li id="myid1"><a href="./splash.php"><i class="fa fa-circle-o"></i>Splash</a></li>
           <li id="myid2"><a href="./login.php"><i class="fa fa-circle-o"></i>Login</a></li>
           <li id="myid3"><a href="./createaccount.php"><i class="fa fa-circle-o"></i>Create Account</a></li>
           <li id="myid4"><a href="./forgotpassword.php"><i class="fa fa-circle-o"></i>Forgot Password</a></li>
-          <li id="myid19"><a href="./configurecustompost.php"><i class="fa fa-circle-o"></i>Configure Custom Post Layouts</a></li>
           <li id="myid11"><a href="./search.php"><i class="fa fa-circle-o"></i>Search</a></li>
           <li id="myid11"><a href="./mobilesidebar.php"><i class="fa fa-circle-o"></i>Drawer</a></li>
           <li id="myid12"><a href="./profile.php"><i class="fa fa-circle-o"></i>Profile</a></li>
           <li id="myid13"><a href="./editprofile.php"><i class="fa fa-circle-o"></i>Edit Profile</a></li>
           <li id="myid14"><a href="./comment.php"><i class="fa fa-circle-o"></i>Comment</a></li>
-          <li id="myid15"><a href="./gallery.php"><i class="fa fa-circle-o"></i>Gallery</a></li>
         </ul>
       </li>
       <li class="treeview" id="downloads">

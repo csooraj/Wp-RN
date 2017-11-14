@@ -102,9 +102,9 @@
 </body>
 <script>
   $(document).ready(function(){
-    document.getElementById("box-title").innerHTML="Configure Layout5 for "+$.cookie("menuitem")
+    document.getElementById("box-title").innerHTML="Configure Layout for "+$.cookie("custompost")
     var appname = $.cookie("appname");
-    var menuitem = $.cookie("menuitem");
+    var menuitem = $.cookie("custompost");
     $('#myid8').addClass('active');
     document.getElementById("nameapp").innerHTML = appname;
     $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Layout5/"+menuitem+".json", function(result){

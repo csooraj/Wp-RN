@@ -1,6 +1,6 @@
 function UploadPostArchiveDetails() {
   let appname = $.cookie("appname");
-  let menuname = $.cookie("menuitem");
+  let menuname = $.cookie("custompost");
   let database = firebase.database();
   let PostArchive_subtitlecolor = document.getElementById("PostArchive_subtitlecolor").value;
   let PostArchive_titlecolor = document.getElementById("PostArchive_titlecolor").value;

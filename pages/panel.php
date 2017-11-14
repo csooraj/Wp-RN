@@ -5,22 +5,9 @@
                     <div class="form-group">
                       <span>
                         <input id="submenulabel" class="form-control" name="fields[]" type="text" placeholder="Type Menu Label" />
-                        <select class="form-control" id="submenuurl" >
-                          <option>www.google.com</option>
-                          <option>www.facebook.com</option>
-                          <option>www.kpcd.com</option>
-                        </select>
                         <div class="form-group">
                           <select class="form-control" id="submenulayout" >
-                            <option>Layout1</option>
-                            <option>Layout2</option>
-                            <option>Layout3</option>
-                            <option>Layout4</option>
-                            <option>Layout5</option>
-                            <option>Layout6</option>
-                            <option>Layout7</option>
-                            <option>Layout8</option>
-                            <option>Layout9</option>
+                            <option>Select the view to be linked</option>
                           </select>
                         </div>
                       </span>

@@ -257,11 +257,11 @@
 </body>
 <script>
   $(document).ready(function(){
-    document.getElementById("box-title").innerHTML="Configure Layout2 for "+$.cookie("menuitem")
+    document.getElementById("box-title").innerHTML="Configure Layout for "+$.cookie("custompost")
     var appname = $.cookie("appname");
     $('#myid18').addClass('active');
     document.getElementById("nameapp").innerHTML = appname;
-    let menuitem = $.cookie("menuitem");
+    let menuitem = $.cookie("custompost");
     $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Layout2/"+menuitem+"/.json", function(result){
       var obj = result;
       if(obj.PostArchiveTitleColor!==undefined){

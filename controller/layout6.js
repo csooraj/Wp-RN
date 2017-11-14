@@ -1,7 +1,7 @@
 function UploadCategoryDetails() {
   let appname = $.cookie("appname");
   let database = firebase.database();
-  let menuitem = $.cookie("menuitem");
+  let menuitem = $.cookie("custompost");
   let Menu_textcolor = document.getElementById("Menu_textcolor").value;
   let e1 = document.getElementById("Menu_fontFamily");
   let Menu_fontFamily = e1.options[e1.selectedIndex].text;

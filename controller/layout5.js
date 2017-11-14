@@ -1,6 +1,6 @@
 function UploadCategoryArchiveDetails() {
   let appname = $.cookie("appname");
-  var menuitem = $.cookie("menuitem");
+  var menuitem = $.cookie("custompost");
   let database = firebase.database();
   let CatArchive_titlecolor = document.getElementById("CatArchive_titlecolor").value;
   let CatArchive_bordercolor = document.getElementById("CatArchive_bordercolor").value;
