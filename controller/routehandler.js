@@ -44,7 +44,12 @@ function UploadScreenDetails() {
       }
     });
 
-    firebase.database().ref(appname+"/Screens/ScreenList").push(screen, function(error) {
+    let screenData = {
+      "Screen": screen,
+      "Layout": layout,
+    }
+    
+    firebase.database().ref(appname+"/Screens/ScreenList").push(screenData, function(error) {
       if (error !== null) {
         alert("Some Error Occured Try Again");
       }else{

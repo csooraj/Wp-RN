@@ -64,13 +64,11 @@ $(document).ready(function(){
   firebase.database().ref(appname+"/MenuItems/").on('value', function(snapshot) {
         $("#test").empty();
    snapshot.forEach(function(entry) {
-        $("#test").append("<tr id="+entry.val().Name.replace(/\s/g,'')+"><td>"+entry.val().Name+"</td><td id="+entry.val().Name+"url"+">"+entry.val().LinkTo+"</td><td><button type=button class='btn btn-danger' onclick=\"handledelete('" + entry.val().Name + "')\">DELETE</button></td></tr>");
+        $("#test").append("<tr id="+entry.val().Name.replace(/\s/g,'')+"><td>"+entry.val().Name+"</td><td id="+entry.val().Name.replace(/\s/g,'')+"url"+">"+entry.val().LinkTo+"</td><td><button type=button class='btn btn-success' onclick=\"handleedit('" + entry.val().Name + "')\">EDIT</button></td><td><button type=button class='btn btn-danger' onclick=\"handledelete('" + entry.val().Name + "')\">DELETE</button></td></tr>");
         if(entry.val().ChildItems=== undefined){
           //console.log("Do Nothing", entry.val().SubMenu);
         }else{
-          console.log("Child Items", entry.val().SubMenu);
           entry.val().ChildItems.forEach(function(item, index) {
-            console.log("The index is----->", index);
             $('#'+entry.val().Name.replace(/\s/g,'')).append("<table class='table table-bordered bg-success'><thead><tr><th>Sub Menu Label</th><th>Connected View</th><th>Action</th></tr></thead><tr><td id="+item.Name+">"+item.Name+"</td><td id="+item.Layout+">"+item.Layout+"</td><td><button type='button' class='btn btn-danger' onclick=\"handleDeleteSubItems('"+entry.val().Name+','+index+ "')\">DELETE</button></td></tr></table>");
           });
         }
@@ -79,3 +77,28 @@ $(document).ready(function(){
 });
 
 });
+
+function handleedit(entry){
+   $("html, body").animate({ scrollTop: 0 }, "slow");
+   menuItems = [];
+   $("#savechanges").show();
+   $('#radioview').show();
+   var appname = $.cookie("appname");
+   document.getElementById("menu_label").value = entry;
+   document.getElementById("screen_link").value = document.getElementById ( entry.replace(/\s/g,'')+"url" ).innerText;
+ }
+
+function handledelete(entry){
+   var appname = $.cookie("appname");
+   firebase.database().ref(appname+"/MenuItems/"+entry).remove();
+ }
+
+ function handleDeleteSubItems(entry){
+    var res = entry.split(",");
+    var appname = $.cookie("appname");
+    firebase.database().ref(appname+"/MenuItems/"+res[0]+"/ChildItems/"+res[1]).remove();
+  }
+
+  $("#clearchanges").click(function(){
+         location.reload();
+      });

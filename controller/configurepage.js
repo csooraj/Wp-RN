@@ -29,7 +29,7 @@ function handleUpdateSubItems(entry) {
 function handleEditLayout(entry) {
   var res = entry.split(",");
   $.cookie("custompost", res[0]);
-  $(location).attr('href','./'+res[1].toLowerCase()+'.php');
+  $(location).attr('href','./page.php');
 }
 
 function handleDelete(entry) {

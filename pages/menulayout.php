@@ -93,9 +93,8 @@ $(document).ready(function(){
     var appname = $.cookie("appname");
     $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Screens/ScreenList.json", function(result){
             $.each(result, function(i, field){
-              console.log("field", field)
-                $("#screen_link").append('<option value='+field+'>'+field+'</option>');
-                $("#submenulayout").append('<option value='+field+'>'+field+'</option>');
+                $("#screen_link").append('<option value='+field.Screen+'>'+field.Screen+'</option>');
+                $("#submenulayout").append('<option value='+field.Screen+'>'+field.Screen+'</option>');
             });
     });
   });

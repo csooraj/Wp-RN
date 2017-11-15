@@ -23,9 +23,34 @@ function handleUpdateSubItems(entry) {
     if (error !== null) {
       document.getElementById('loading').innerHTML = 'Some Error Occured....';
     } else {
-      alert("Updated Successfully");
+      //alert("Updated Successfully");
     }
   });
+
+  let screenData = {
+    "Screen": entry,
+    "Layout": layout,
+  }
+
+  var ref = firebase.database().ref(appname+"/Screens/ScreenList/");
+  ref.once('value', (snapshot) => {
+    snapshot.forEach(function(data, index) {
+      if(data.val().Screen===entry){
+        let key = data.key;
+        firebase.database().ref(appname+"/Screens/ScreenList/"+key).update({"Layout": layout});
+      }
+    });
+    alert("Updated Successfully");
+  });
+
+  // firebase.database().ref(appname+"/Screens/ScreenList").update(screenData, function(error) {
+  //   if (error !== null) {
+  //     alert("Some Error Occured Try Again");
+  //   }else{
+  //     alert("Updated Successfully");
+  //     //location.reload();
+  //   }
+  // });
 }
 
 function handleEditLayout(entry) {
