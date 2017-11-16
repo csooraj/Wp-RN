@@ -1,6 +1,6 @@
 function UploadPostArchiveDetails() {
   let appname = $.cookie("appname");
-  let menuitem = $.cookie("menuitem");
+  let menuitem = $.cookie("custompost");
   let database = firebase.database();
   let PostArchive_subtitlecolor = document.getElementById("PostArchive_subtitlecolor").value;
   let PostArchive_titlecolor = document.getElementById("PostArchive_titlecolor").value;
@@ -17,6 +17,7 @@ function UploadPostArchiveDetails() {
   let Post_titlefontFamilyIOS = e9.options[e9.selectedIndex].text;
   var e10 = document.getElementById("Post_authorFontIOS");
   let Post_authorFontIOS = e10.options[e10.selectedIndex].text;
+  let LinkTo = $('#layoutbutton').text();
 
 
 

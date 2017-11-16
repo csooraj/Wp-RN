@@ -22,9 +22,23 @@ function handleUpdateSubItems(entry) {
   firebase.database().ref(appname+"/Screens/CustomPost/"+entry).update(data, function(error) {
     if (error !== null) {
       document.getElementById('loading').innerHTML = 'Some Error Occured....';
-    } else {
-      alert("Updated Successfully");
     }
+  });
+
+  let screenData = {
+    "Screen": entry,
+    "Layout": layout,
+  }
+
+  var ref = firebase.database().ref(appname+"/Screens/ScreenList/");
+  ref.once('value', (snapshot) => {
+    snapshot.forEach(function(data, index) {
+      if(data.val().Screen===entry){
+        let key = data.key;
+        firebase.database().ref(appname+"/Screens/ScreenList/"+key).update({"Layout": layout});
+      }
+    });
+    alert("Updated Successfully");
   });
 }
 
@@ -32,7 +46,7 @@ function handleEditLayout(entry) {
   var res = entry.split(",");
   $.cookie("custompost", res[0]);
   if(res[1]=== 'custompost_list'){
-    window.open('./layout1.php','_blank');
+    window.open('./layout8.php','_blank');
     //$(location).attr('href','./layout1.php');
   }else{
     window.open('./layout4.php','_blank');

@@ -67,6 +67,22 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Select layout for internal view</label>
+                  <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" id="layoutbutton" type="button" data-toggle="dropdown">Select Layout
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" style="height: auto;max-height: 416px; width:300px;overflow-x: hidden;" id="layout">
+                      <li style='margin-bottom:10px'><a title="CategoryPostListWithImage"><img src=../assets/Post_ImageList.png></a></li>
+                      <li style='margin-bottom:10px'><a title="CategoryPostWithTab"><img src=../assets/Post_Tabbar.png></a></li>
+                      <li style='margin-bottom:10px'><a title="CategoryPostWithImage"><img src=../assets/Post_Image.png></a></li>
+                      <li style='margin-bottom:10px'><a title="CategoryPostList"><img src=../assets/Post_List.png></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="button" id="configurelayout" onclick="handleEditLayout()" class="btn btn-success">Configure Layout</button>
+                </div>
+                <div class="form-group">
                   <a class="btn btn-app" onClick="UploadCategoryDetails()">
                     <i class="fa fa-save"></i> Save
                   </a>
@@ -101,6 +117,7 @@
     $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Layout6/"+menuitem+".json", function(result){
       var obj = result;
       if(obj.CategoryTextColor!==undefined){
+          $('#layoutbutton').text(obj.LinkTo);
           document.getElementById("Menu_fontFamily").value=obj.CategoryTextFontFamily;
           document.getElementById("Menu_fontFamilyIOS").value=obj.CategoryTextFontFamilyIOS;
           $("#Menu_textcolor").val(obj.CategoryTextColor); $("#Menu_textcolor").trigger('change');

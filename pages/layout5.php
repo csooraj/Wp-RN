@@ -76,6 +76,22 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Select layout for internal view</label>
+                  <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" id="layoutbutton" type="button" data-toggle="dropdown">Select Layout
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" style="height: auto;max-height: 416px; width:300px;overflow-x: hidden;" id="layout">
+                      <li style='margin-bottom:10px'><a title="CategoryPostListWithImage"><img src=../assets/Post_ImageList.png></a></li>
+                      <li style='margin-bottom:10px'><a title="CategoryPostWithTab"><img src=../assets/Post_Tabbar.png></a></li>
+                      <li style='margin-bottom:10px'><a title="CategoryPostWithImage"><img src=../assets/Post_Image.png></a></li>
+                      <li style='margin-bottom:10px'><a title="CategoryPostList"><img src=../assets/Post_List.png></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-success" onclick="handleEditLayout()">Configure Layout</button>
+                </div>
+                <div class="form-group">
                   <a class="btn btn-app" onClick="UploadCategoryArchiveDetails()">
                     <i class="fa fa-save"></i> Save
                   </a>
@@ -110,6 +126,7 @@
     $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Layout5/"+menuitem+".json", function(result){
       var obj = result;
       if(obj.CategoryArchiveTitleColor!==undefined){
+          $('#layoutbutton').text(obj.LinkTo);
           document.getElementById("CatArchive_fontFamily").value=obj.CategoryArchiveFont;
           document.getElementById("CatArchive_fontFamilyIOS").value=obj.CategoryArchiveFontIOS;
           $("#CatArchive_titlecolor").val(obj.CategoryArchiveTitleColor); $("#CatArchive_titlecolor").trigger('change');

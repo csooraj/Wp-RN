@@ -189,9 +189,9 @@
 </body>
 <script>
   $(document).ready(function(){
-    document.getElementById("box-title").innerHTML="Configure Layout8 for "+$.cookie("menuitem")
+    document.getElementById("box-title").innerHTML="Configure Layout8 for "+$.cookie("custompost")
     var appname = $.cookie("appname");
-    var menuitem = $.cookie("menuitem");
+    var menuitem = $.cookie("custompost");
     $('#myid17').addClass('active');
     document.getElementById("nameapp").innerHTML = appname;
     $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Layout8/"+menuitem+".json", function(result){
