@@ -26,12 +26,16 @@
                       <option value=""></option>
                       <option value="Page">http://stage.liquidfactory.it/villamedici/wp-json/wp-react/v1/pages?id=375</option>
                       <option value="Page">http://stage.liquidfactory.it/villamedici/wp-json/wp-react/v1/pages?id=49645</option>
-                      <option value="Page">http://stage.liquidfactory.it/villamedici/wp-json/wp-react/v1/pages?id=176</option>
+                      <option value="Page">http://stage.liquidfactory.it/villamedici/wp-json/wp-react/v1/pages?id=111</option>
+                      <option value="Page">http://stage.liquidfactory.it/villamedici/wp-json/wp-react/v1/pages?id=48088</option>
                     </optgroup>
                     <optgroup label="Custom Posts">
                       <option value="CustomPost">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=mostre</option>
                       <option value="CustomPost">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=i-giovedi</option>
                       <option value="CustomPost">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=altri-eventi</option>
+                      <option value="CustomPost">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=residenze</option>
+                      <option value="CustomPost">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=cataloghi</option>
+                      <option value="CustomPost">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=direttori</option>
                       <option value="CustomPost">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=actualites</option>
                     </optgroup>
                     <optgroup label="Taxonomy">

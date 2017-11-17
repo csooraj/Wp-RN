@@ -23,10 +23,11 @@ function UploadPostViewDetails() {
   let Post_commentFont = document.getElementById("Post_commentFont").value;
   let Post_commentFontIOS = document.getElementById("Post_commentFontIOS").value;
   let Post_commentSize = document.getElementById("Post_commentSize").value;
-
+  let page_url = $.cookie("pageurl");
   if ((Post_titleSize !== '') && (Post_titlefontFamily !== '') && (Post_titlecolor !== '') && (Post_datecolor !== '') && (Post_authorfontFamily !== '')) {
     document.getElementById("Error").innerHTML = "";
       var data = {
+        "PageUrl": page_url,
         "PostTitleSize": Post_titleSize,
         "PostTitleColor": Post_titlecolor,
         "PostTitleFont": Post_titlefontFamily,

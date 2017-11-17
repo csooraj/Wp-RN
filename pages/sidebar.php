@@ -56,6 +56,7 @@
           <li id="myid3"><a href="./createaccount.php"><i class="fa fa-circle-o"></i>Create Account</a></li>
           <li id="myid4"><a href="./forgotpassword.php"><i class="fa fa-circle-o"></i>Forgot Password</a></li>
           <li id="myid11"><a href="./search.php"><i class="fa fa-circle-o"></i>Search</a></li>
+          <li id="myid11"><a href="./home.php"><i class="fa fa-circle-o"></i>Home</a></li>
           <li id="myid11"><a href="./mobilesidebar.php"><i class="fa fa-circle-o"></i>Drawer</a></li>
           <li id="myid12"><a href="./profile.php"><i class="fa fa-circle-o"></i>Profile</a></li>
           <li id="myid13"><a href="./editprofile.php"><i class="fa fa-circle-o"></i>Edit Profile</a></li>

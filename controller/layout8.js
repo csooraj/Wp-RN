@@ -1,6 +1,7 @@
 function UploadPostArchiveDetails() {
   let appname = $.cookie("appname");
   let menuitem = $.cookie("custompost");
+  let loadurl = $.cookie("customposturl");
   let database = firebase.database();
   let PostArchive_subtitlecolor = document.getElementById("PostArchive_subtitlecolor").value;
   let PostArchive_titlecolor = document.getElementById("PostArchive_titlecolor").value;
@@ -24,6 +25,7 @@ function UploadPostArchiveDetails() {
   if ((PostArchive_subtitlecolor !== '') && ( PostArchive_titlecolor!== '') && (PostArchive_categorycolor !== '')) {
     document.getElementById("Error").innerHTML = "";
       var data = {
+        "LoadUrl": loadurl,
         "PostArchiveTitleColor": PostArchive_titlecolor,
         "PostArchiveSubTitleColor": PostArchive_subtitlecolor,
         "PostArchiveCategoryColor": PostArchive_categorycolor,

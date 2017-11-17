@@ -255,7 +255,7 @@
 </body>
 <script>
   $(document).ready(function(){
-    document.getElementById("box-title").innerHTML="Configure Layout4 for "+$.cookie("menuitem")
+    document.getElementById("box-title").innerHTML="Configure HomeScreen ";
     var appname = $.cookie("appname");
     $('#myid6').addClass('active');
     $.getJSON("https://wp-react.firebaseio.com/"+appname+"/HomeScreen.json", function(result){

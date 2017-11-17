@@ -5,8 +5,9 @@ $(document).ready(function(){
       $("#test").empty();
       snapshot.forEach(function(entry, index) {
         var layout = entry.val().Layout;
+        var url = entry.val().Url;
         var imageLink = layout.toLowerCase();
-        $("#test").append("<tr><td>"+entry.key+"</td><td><img class=img-responsive style=height:416px;width:200px src=../assets/"+imageLink+".png></td><td><a><button type='button' class='btn btn-success' onclick=\"handleEditLayout('"+entry.key+','+imageLink+"')\">CONFIGURE LAYOUT</button></a></td><td><a href=./"+imageLink+".php></a><select class='form-control' id="+entry.key.replace(/ /g,'')+"><option>Custompost_Tile</option><option>Custompost_List</option></select></td><td><button type='button' class='btn btn-primary' onclick=\"handleUpdateSubItems('"+entry.key+"')\">UPDATE</button></td><td><button type='button' class='btn btn-danger' onclick=\"handleDelete('"+entry.key+"')\">DELETE</button></td></tr>");
+        $("#test").append("<tr><td>"+entry.key+"</td><td><img class=img-responsive style=height:416px;width:200px src=../assets/"+imageLink+".png></td><td><a><button type='button' class='btn btn-success' onclick=\"handleEditLayout('"+entry.key+','+url+','+imageLink+"')\">CONFIGURE LAYOUT</button></a></td><td><a href=./"+imageLink+".php></a><select class='form-control' id="+entry.key.replace(/ /g,'')+"><option>Custompost_Tile</option><option>Custompost_List</option></select></td><td><button type='button' class='btn btn-primary' onclick=\"handleUpdateSubItems('"+entry.key+"')\">UPDATE</button></td><td><button type='button' class='btn btn-danger' onclick=\"handleDelete('"+entry.key+"')\">DELETE</button></td></tr>");
         $("#"+entry.key).val(layout);
       });
       document.getElementById("loader").innerHTML = "";
@@ -44,8 +45,9 @@ function handleUpdateSubItems(entry) {
 
 function handleEditLayout(entry) {
   var res = entry.split(",");
+  $.cookie("customposturl", res[1]);
   $.cookie("custompost", res[0]);
-  if(res[1]=== 'custompost_list'){
+  if(res[2]=== 'custompost_list'){
     window.open('./layout8.php','_blank');
     //$(location).attr('href','./layout1.php');
   }else{

@@ -23,6 +23,28 @@
                   <input id="websiteurl" class="form-control" type="text" placeholder="Enter The Website Url Of App" required>
                 </div>
                 <div class="form-group">
+                  <label>Enter Home Screen Content Url</label>
+                  <select class="form-control" id="homeurl">
+                    <option>http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=mostre</option>
+                    <option>http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=i-giovedi</option>
+                    <option>http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=residenze</option>
+                    <option>http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=cataloghi</option>
+                    <option>http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=direttori</option>
+                    <option>http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=actualites</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Enter Home Screen Slider Content Url</label>
+                  <select class="form-control" id="sliderurl">
+                    <option>http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=mostre</option>
+                    <option>http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=i-giovedi</option>
+                    <option>http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=residenze</option>
+                    <option>http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=cataloghi</option>
+                    <option>http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=direttori</option>
+                    <option>http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=actualites</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <a class="btn btn-app" onclick="UploadWebSiteUrl()">
                     <i class="fa fa-save"></i> Save
                   </a>
@@ -46,10 +68,18 @@ $(document).ready(function(){
   var appname = $.cookie("appname");
   //$('#myid9').addClass('active');
   document.getElementById("nameapp").innerHTML = appname;
+
   $.getJSON("https://wp-react.firebaseio.com/"+appname+"/AppUrl.json", function(result){
     var obj = result;
     if(obj.AppUrl!==undefined){
         document.getElementById("websiteurl").value=obj.AppUrl;
+    }
+  });
+  $.getJSON("https://wp-react.firebaseio.com/"+appname+"/HomeScreen.json", function(result){
+    var obj = result;
+    if(obj.HomeUrl!==undefined){
+      document.getElementById("homeurl").value=obj.HomeUrl;
+      document.getElementById("sliderurl").value=obj.SliderUrl;
     }
   });
  });

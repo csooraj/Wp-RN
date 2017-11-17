@@ -47,8 +47,9 @@ function UploadScreenDetails() {
     let screenData = {
       "Screen": screen,
       "Layout": layout,
+      "Url": url,
     }
-    
+
     firebase.database().ref(appname+"/Screens/ScreenList").push(screenData, function(error) {
       if (error !== null) {
         alert("Some Error Occured Try Again");
