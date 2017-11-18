@@ -48,6 +48,7 @@ function UploadScreenDetails() {
       "Screen": screen,
       "Layout": layout,
       "Url": url,
+      "Terms": terms,
     }
 
     firebase.database().ref(appname+"/Screens/ScreenList").push(screenData, function(error) {
@@ -80,7 +81,11 @@ function UploadScreenDetails() {
     $('#terms').empty();
     $.getJSON(termurl, function(result){
        $.each(result, function(i, field){
-           $("#terms").append('<option value='+field.name+'>'+field.name+'</option>');
+           if(field.metaData.length>0){
+              $("#terms").append('<option value='+field.metaData.lf_featured[0]+'+'+field.defaultData.name+'+'+field.defaultData.term_id+'+'+field.defaultData.taxonomy+'>'+field.defaultData.name+'</option>');
+           }else{
+              $("#terms").append('<option value='+' '+'+'+field.defaultData.name+'+'+field.defaultData.term_id+'+'+field.defaultData.taxonomy+'>'+field.defaultData.name+'</option>');
+           }
        });
        $('#terms').selectpicker('refresh');
    });

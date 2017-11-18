@@ -39,9 +39,9 @@
                       <option value="CustomPost">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=actualites</option>
                     </optgroup>
                     <optgroup label="Taxonomy">
-                      <option value="Taxonomy">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/terms?name=categoria-consigli</option>
-                      <option value="Taxonomy">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/terms?name=categoria-residenze</option>
-                      <option value="Taxonomy">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/terms?name=categoria-giovedi</option>
+                      <option value="Taxonomy">http://stage.liquidfactory.it/villamedici/wp-json/test-plugin/v1/parent-terms?taxonomy=categoria-consigli</option>
+                      <option value="Taxonomy">http://stage.liquidfactory.it/villamedici/wp-json/test-plugin/v1/parent-terms?taxonomy=categoria-residenze</option>
+                      <option value="Taxonomy">http://stage.liquidfactory.it/villamedici/wp-json/test-plugin/v1/parent-terms?taxonomy=categoria-giovedi</option>
                     </optgroup>
                   </select>
                 </div>

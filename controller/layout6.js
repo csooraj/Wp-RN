@@ -9,6 +9,8 @@ function UploadCategoryDetails() {
   let Menu_fontFamilyIOS = e2.options[e2.selectedIndex].text;
   let CatArchive_LinkTo = $('#layoutbutton').text();
 
+  $.getJSON("https://wp-react.firebaseio.com/"+appname+"/Screens/Taxonomy/"+menuitem+".json", function(result){
+  let child_terms = result.Terms;
   if ((Menu_textcolor !== '')) {
     document.getElementById("Error").innerHTML = "";
       var data = {
@@ -17,6 +19,7 @@ function UploadCategoryDetails() {
         "CategoryTextFontFamilyIOS": Menu_fontFamilyIOS,
         "LinkTo": CatArchive_LinkTo,
         "ScreenName": menuitem,
+        "ChildTerms": child_terms,
       };
     firebase.database().ref("Test/Layout6/"+menuitem).update(data, function(error) {
       if (error !== null) {
@@ -35,6 +38,7 @@ function UploadCategoryDetails() {
   } else {
     document.getElementById("Error").innerHTML = "<p class=" + "bg-danger" + ">Error!! Fill Empty Fields</p>";
   }
+ });
 }
 
 $("#layout").on('click', 'li a', function(){
