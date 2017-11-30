@@ -7,7 +7,7 @@ $(document).ready(function(){
         var layout = entry.val().Layout;
         var url = entry.val().Url;
         var imageLink = layout.toLowerCase();
-        $("#test").append("<tr><td>"+entry.key+"</td><td><img class=img-responsive style=height:416px;width:200px src=../assets/"+imageLink+".png></td><td><a><button type='button' class='btn btn-success' onclick=\"handleEditLayout('"+entry.key+','+url+','+imageLink+"')\">CONFIGURE LAYOUT</button></a></td><td><a href=./"+imageLink+".php></a><select class='form-control' id="+entry.key.replace(/ /g,'')+"><option>Taxonomy_Grid</option><option>Taxonomy_List</option></select></td><td><button type='button' class='btn btn-primary' onclick=\"handleUpdateSubItems('"+entry.key+"')\">UPDATE</button></td><td><button type='button' class='btn btn-danger' onclick=\"handleDelete('"+entry.key+"')\">DELETE</button></td></tr>");
+        $("#test").append("<tr><td>"+entry.key+"</td><td><img class=img-responsive style=height:416px;width:200px src=../assets/"+imageLink+".png></td><td><a><button type='button' class='btn btn-success' onclick=\"handleEditLayout('"+entry.key+','+url+','+imageLink+"')\">CONFIGURE LAYOUT</button></a></td><td><a href=./"+imageLink+".php></a><select class='form-control' id="+entry.key.replace(/ /g,'')+"><option>Taxonomy_Grid</option><option>Taxonomy_List</option>option>Taxonomy_Tab</option></select></td><td><button type='button' class='btn btn-primary' onclick=\"handleUpdateSubItems('"+entry.key+"')\">UPDATE</button></td><td><button type='button' class='btn btn-danger' onclick=\"handleDelete('"+entry.key+"')\">DELETE</button></td></tr>");
         $("#"+entry.key).val(layout);
       });
       document.getElementById("loader").innerHTML = "";
@@ -61,9 +61,11 @@ function handleEditLayout(entry) {
   if(res[2]=== 'taxonomy_list'){
     window.open('./layout5.php','_blank');
     //$(location).attr('href','./layout1.php');
-  }else{
+  }else if (res[2]=== 'taxonomy_grid'){
     window.open('./layout6.php','_blank');
     //$(location).attr('href','./layout4.php');
+  }else{
+    window.open('./layout2.php','_blank');
   }
 }
 

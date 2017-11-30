@@ -24,6 +24,8 @@ function UploadPostViewDetails() {
   let Post_commentFontIOS = document.getElementById("Post_commentFontIOS").value;
   let Post_commentSize = document.getElementById("Post_commentSize").value;
   let page_url = $.cookie("pageurl");
+  let Post_dateLocale = document.getElementById("Date_locale").value;
+  let Post_dateFormat = document.getElementById("Date_format").value;
   if ((Post_titleSize !== '') && (Post_titlefontFamily !== '') && (Post_titlecolor !== '') && (Post_datecolor !== '') && (Post_authorfontFamily !== '')) {
     document.getElementById("Error").innerHTML = "";
       var data = {
@@ -31,6 +33,8 @@ function UploadPostViewDetails() {
         "PostTitleSize": Post_titleSize,
         "PostTitleColor": Post_titlecolor,
         "PostTitleFont": Post_titlefontFamily,
+        "PostDateLocale": Post_dateLocale,
+        "PostDateFormat": Post_dateFormat,
         "PostTitleFontIOS": Post_titlefontFamilyIOS,
         "PostDateColor": Post_datecolor,
         "PostAuthorFont": Post_authorfontFamily,

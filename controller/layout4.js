@@ -15,6 +15,8 @@ function UploadPostArchiveDetails() {
   var e3 = document.getElementById("Post_authorFont");
   let Post_authorFont = e3.options[e3.selectedIndex].text;
   let Post_authorFontIOS = document.getElementById("Post_authorFontIOS").value;
+  let Post_dateLocale = document.getElementById("Date_locale").value;
+  let Post_dateFormat = document.getElementById("Date_format").value;
 
 
 
@@ -23,6 +25,8 @@ function UploadPostArchiveDetails() {
       var data = {
         "LoadUrl": loadurl,
         "PostArchiveTitleColor": PostArchive_titlecolor,
+        "PostDateLocale": Post_dateLocale,
+        "PostDateFormat": Post_dateFormat,
         "PostArchiveSubTitleColor": PostArchive_subtitlecolor,
         "PostArchiveCategoryColor": PostArchive_categorycolor,
         "PostTitleFontFamily": Post_titlefontFamily,

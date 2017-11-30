@@ -77,6 +77,22 @@
                   </div>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Select Post Date Locale </label>
+                  <select class="form-control" id="Date_locale">
+                    <option value="en">English</option>
+                    <option value="it">Italian</option>
+                    <option value="fr">French</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Select Post Date Format </label>
+                  <select class="form-control" id="Date_format">
+                    <option value="LL">November 30, 2017</option>
+                    <option value="ll">Nov 30, 2017</option>
+                    <option value="DD/MM/YYYY">30/11/2017</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label for="sel1">Post Author Font Family Android: </label>
                   <select class="form-control" id="Post_authorFont">
                     <option>normal</option>
@@ -281,6 +297,17 @@
                   <input id="Post_commentSize" type="number" class="form-control">
                 </div>
                 <div class="form-group">
+                  <label>Show Comment / Hide Comment</label>
+                  <div>
+                    <label class="radio-inline">
+                    <input type="radio" id="r2" name="optradio" value="show">Show Comment
+                    </label>
+                    <label class="radio-inline">
+                    <input type="radio" id="r1" name="optradio" value="hide">Hide Comment
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
                   <a class="btn btn-app" onClick="UploadPostViewDetails()">
                   <i class="fa fa-save"></i> Save
                   </a>
@@ -308,10 +335,11 @@
   <script>
     $(document).ready(function(){
       var appname = $.cookie("appname");
-      $('#myid10').addClass('active');
+      $('#myid15').addClass('active');
       document.getElementById("nameapp").innerHTML = appname;
       $.getJSON("https://wp-react.firebaseio.com/"+appname+"/PostDetails.json", function(result){
         var obj = result;
+        var type = obj.PostShowComment;
         if(obj.PostTitleSize!==undefined){
           document.getElementById("Post_titleSize").value = obj.PostTitleSize;
           document.getElementById("Post_titleFont").value = obj.PostTitleFont;
@@ -323,6 +351,8 @@
           $("#Post_categoryColor").val(obj.PostCategoryColor); $("#Post_categoryColor").trigger('change');
           $("#Post_contentColor").val(obj.PostContentColor); $("#Post_contentColor").trigger('change');
           document.getElementById("Post_authorFont").value=obj.PostAuthorFont;
+          document.getElementById("Date_locale").value=obj.PostDateLocale;
+          document.getElementById("Date_format").value=obj.PostDateFormat;
           document.getElementById("Post_authorFontIOS").value=obj.PostAuthorFontIOS;
           document.getElementById("Post_commentSize").value=obj.PostCommentSize;
           document.getElementById("Post_commentFont").value=obj.PostCommentFont;
@@ -333,6 +363,11 @@
           document.getElementById("Post_contentSize").value=obj.PostContentSize;
           document.getElementById("Post_contentFont").value=obj.PostContentFont;
           document.getElementById("Post_contentFontIOS").value=obj.PostContentFontIOS;
+          if(type==='hide'){
+            $('#r1').attr("checked","true");
+          }else{
+            $('#r2').attr("checked","true");
+          }
         }
       });
      });

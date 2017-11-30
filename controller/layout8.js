@@ -19,6 +19,8 @@ function UploadPostArchiveDetails() {
   var e10 = document.getElementById("Post_authorFontIOS");
   let Post_authorFontIOS = e10.options[e10.selectedIndex].text;
   let LinkTo = $('#layoutbutton').text();
+  let PostDate_locale = document.getElementById("Date_locale").value;
+  let PostDate_format = document.getElementById("Date_format").value;
 
 
 
@@ -27,6 +29,8 @@ function UploadPostArchiveDetails() {
       var data = {
         "LoadUrl": loadurl,
         "PostArchiveTitleColor": PostArchive_titlecolor,
+        "PostDateLocale": PostDate_locale,
+        "PostDateFormat": PostDate_format,
         "PostArchiveSubTitleColor": PostArchive_subtitlecolor,
         "PostArchiveCategoryColor": PostArchive_categorycolor,
         "PostTitleFontFamily": Post_titlefontFamily,

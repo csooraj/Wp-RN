@@ -23,6 +23,9 @@ function UploadPostViewDetails() {
   let Post_commentFont = document.getElementById("Post_commentFont").value;
   let Post_commentFontIOS = document.getElementById("Post_commentFontIOS").value;
   let Post_commentSize = document.getElementById("Post_commentSize").value;
+  let Post_showComment = document.querySelector('input[name="optradio"]:checked').value;
+  let Post_dateLocale = document.getElementById("Date_locale").value;
+  let Post_dateFormat = document.getElementById("Date_format").value;
 
   if ((Post_titleSize !== '') && (Post_titlefontFamily !== '') && (Post_titlecolor !== '') && (Post_datecolor !== '') && (Post_authorfontFamily !== '')) {
     document.getElementById("Error").innerHTML = "";
@@ -32,6 +35,8 @@ function UploadPostViewDetails() {
         "PostTitleFont": Post_titlefontFamily,
         "PostTitleFontIOS": Post_titlefontFamilyIOS,
         "PostDateColor": Post_datecolor,
+        "PostDateLocale": Post_dateLocale,
+        "PostDateFormat": Post_dateFormat,
         "PostAuthorFont": Post_authorfontFamily,
         "PostAuthorFontIOS": Post_authorfontFamilyIOS,
         "PostCategoryColor": Post_categoryColor,
@@ -47,6 +52,7 @@ function UploadPostViewDetails() {
         "PostCommentFont": Post_commentFont,
         "PostCommentFontIOS": Post_commentFontIOS,
         "PostCommentSize": Post_commentSize,
+        "PostShowComment": Post_showComment,
       };
     firebase.database().ref("Test/PostDetails").update(data, function(error) {
       if (error !== null) {

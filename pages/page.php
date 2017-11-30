@@ -77,6 +77,22 @@
                   </div>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Select Post Date Locale </label>
+                  <select class="form-control" id="Date_locale">
+                    <option value="en">English</option>
+                    <option value="it">Italian</option>
+                    <option value="fr">French</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Select Post Date Format </label>
+                  <select class="form-control" id="Date_format">
+                    <option value="LL">November 30, 2017</option>
+                    <option value="ll">Nov 30, 2017</option>
+                    <option value="DD/MM/YYYY">30/11/2017</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label for="sel1">Post Author Font Family Android: </label>
                   <select class="form-control" id="Post_authorFont">
                     <option>normal</option>
@@ -325,6 +341,8 @@
           $("#Post_contentColor").val(obj.PostContentColor); $("#Post_contentColor").trigger('change');
           document.getElementById("Post_authorFont").value=obj.PostAuthorFont;
           document.getElementById("Post_authorFontIOS").value=obj.PostAuthorFontIOS;
+          document.getElementById("Date_locale").value=obj.PostDateLocale;
+          document.getElementById("Date_format").value=obj.PostDateFormat;
           document.getElementById("Post_commentSize").value=obj.PostCommentSize;
           document.getElementById("Post_commentFont").value=obj.PostCommentFont;
           document.getElementById("Post_commentFontIOS").value=obj.PostCommentFontIOS;

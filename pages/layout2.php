@@ -229,6 +229,22 @@
                       <option>Zapfino</option>
                     </select>
                   </div>
+                  <div class="form-group">
+                    <label for="sel1">Select Post Date Locale </label>
+                    <select class="form-control" id="Date_locale">
+                      <option value="en">English</option>
+                      <option value="it">Italian</option>
+                      <option value="fr">French</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="sel1">Select Post Date Format </label>
+                    <select class="form-control" id="Date_format">
+                      <option value="LL">November 30, 2017</option>
+                      <option value="ll">Nov 30, 2017</option>
+                      <option value="DD/MM/YYYY">30/11/2017</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="form-group">
                   <a class="btn btn-app" onClick="UploadPostArchiveDetails()">
@@ -275,6 +291,8 @@
           document.getElementById("Post_authorFontIOS").value=obj.PostAuthorFontIOS;
           document.getElementById("Post_tabFont").value=obj.PostTabFont;
           document.getElementById("Post_tabFontIOS").value=obj.PostTabFontIOS;
+          document.getElementById("Date_locale").value=obj.PostDateLocale;
+          document.getElementById("Date_format").value=obj.PostDateFormat;
           document.getElementById("Post_titleFont").value=obj.PostTitleFontFamily;
           document.getElementById("Post_titleFontIOS").value=obj.PostTitleFontFamilyIOS;
           document.getElementById("Post_categoryFont").value=obj.PostCategoryFont;

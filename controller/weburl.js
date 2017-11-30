@@ -4,6 +4,9 @@ function UploadWebSiteUrl() {
   let App_Url = document.getElementById("websiteurl").value;
   let Home_Url = document.getElementById("homeurl").value;
   let Slider_Url = document.getElementById("sliderurl").value;
+  let Loader_Url = document.getElementById("loaderurl").value;
+  let SearchImage_Url = document.getElementById("searchplaceholder").value;
+  let TaxonomyImage_Url = document.getElementById("taxonomyplaceholder").value;
 
   if ((App_Url !== '')) {
     document.getElementById("Error").innerHTML = "";
@@ -13,10 +16,32 @@ function UploadWebSiteUrl() {
 
       var homescreen = {
         "HomeUrl": Home_Url,
-        "SliderUrl": Slider_Url
+        "SliderUrl": Slider_Url,
+        "LoaderUrl": Loader_Url,
       }
 
+      var searchImage = {
+        "PlaceholderImage": SearchImage_Url,
+      }
+
+      var taxonomyImage = {
+        "PlaceholderImage": TaxonomyImage_Url,
+      }
+
+
     firebase.database().ref(appname+"/AppUrl").update(data, function(error) {
+      if (error !== null) {
+        alert("Some Error Occured Try Again");
+      }
+    });
+
+    firebase.database().ref(appname+"/Layout6").update(taxonomyImage, function(error) {
+      if (error !== null) {
+        alert("Some Error Occured Try Again");
+      }
+    });
+
+    firebase.database().ref(appname+"/Search").update(searchImage, function(error) {
       if (error !== null) {
         alert("Some Error Occured Try Again");
       }

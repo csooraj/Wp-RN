@@ -71,7 +71,7 @@ function UploadScreenDetails() {
     var selectValues = {
         Page : ['Page_Plain', 'Page_News', 'Page_Card'],
         CustomPost : ['Custompost_Tile', 'Custompost_List'],
-        Taxonomy : ['Taxonomy_Grid', 'Taxonomy_List'],
+        Taxonomy : ['Taxonomy_Grid', 'Taxonomy_List', 'Taxonomy_Tab'],
     }
     $.each(selectValues[this.value], function(key, value) {
        $('#layout').append("<li style='margin-bottom:10px'><a title="+value+"><img src=../assets/"+value+".png></a></li>");

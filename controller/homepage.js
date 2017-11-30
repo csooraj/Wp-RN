@@ -23,10 +23,14 @@ function UploadSideBarDetails() {
   let Home_posttitlecolor = document.getElementById("Home_posttitlecolor").value;
   let Home_categorytextcolor = document.getElementById("Home_categorytextcolor").value;
   let Home_slidersubcolor = document.getElementById("Home_slidersubcolor").value;
+  let Home_datelocale = document.getElementById("Date_locale").value;
+  let Home_dateformat = document.getElementById("Date_format").value
   if ((Home_headercolor !== '') && (Home_slidersubcolor !== '') && (Home_iconcolor !== '') && (Home_slidertextcolor !== '') && (Home_posttitlecolor !== '') && (Home_categorytextcolor !== '')) {
     document.getElementById("Error").innerHTML = "";
       var data = {
         "HomeHeaderColor": Home_headercolor,
+        "PostDateLocale": Home_datelocale,
+        "PostDateFormat": Home_dateformat,
         "HomeCategoryFont": Home_categoryfont,
         "HomeTitleFont": Home_titleFont,
         "HomeTitleFontIOS": Home_titleFontIOS,

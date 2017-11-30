@@ -229,6 +229,22 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="sel1">Select Post Date Locale </label>
+                  <select class="form-control" id="Date_locale">
+                    <option value="en">English</option>
+                    <option value="it">Italian</option>
+                    <option value="fr">French</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">Select Post Date Format </label>
+                  <select class="form-control" id="Date_format">
+                    <option value="LL">November 30, 2017</option>
+                    <option value="ll">Nov 30, 2017</option>
+                    <option value="DD/MM/YYYY">30/11/2017</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <a class="btn btn-app" onClick="UploadSideBarDetails()">
                     <i class="fa fa-save"></i> Save
                   </a>
@@ -269,6 +285,8 @@
           $("#Home_slidersubcolor").val(obj.HomeSliderSubTitleColor); $("#Home_slidersubcolor").trigger('change');
           document.getElementById("sliderfont").value=obj.HomeSliderFont;
           document.getElementById("sliderfontIOS").value=obj.HomeSliderFontIOS;
+          document.getElementById("Date_locale").value=obj.PostDateLocale;
+          document.getElementById("Date_format").value=obj.PostDateFormat;
           document.getElementById("subtitlefont").value=obj.HomeSubtitleFont;
           document.getElementById("subtitlefontIOS").value=obj.HomeSubtitleFontIOS;
           document.getElementById("titlefont").value=obj.HomeTitleFont;
