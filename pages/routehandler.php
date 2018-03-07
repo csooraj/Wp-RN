@@ -20,28 +20,17 @@
                   <input id="screen" type="text" class="form-control">
                 </div>
                   <label>Select the Url</label>
+                <div id="loader">
+                  <image height="100px" width="100px" src="../assets/loader.gif" />
+                </div>
                 <div class="form-group dropdown">
                   <select class="form-control selectpicker" data-live-search="true" id="url">
-                    <optgroup label="Pages">
-                      <option value=""></option>
-                      <option value="Page">http://stage.liquidfactory.it/villamedici/wp-json/wp-react/v1/pages?id=375</option>
-                      <option value="Page">http://stage.liquidfactory.it/villamedici/wp-json/wp-react/v1/pages?id=49645</option>
-                      <option value="Page">http://stage.liquidfactory.it/villamedici/wp-json/wp-react/v1/pages?id=111</option>
-                      <option value="Page">http://stage.liquidfactory.it/villamedici/wp-json/wp-react/v1/pages?id=48088</option>
+                    <option disabled>Select the Url</option>
+                    <optgroup label="Select Pages" id="page_urls">
                     </optgroup>
-                    <optgroup label="Custom Posts">
-                      <option value="CustomPost">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=mostre</option>
-                      <option value="CustomPost">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=i-giovedi</option>
-                      <option value="CustomPost">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=altri-eventi</option>
-                      <option value="CustomPost">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=residenze</option>
-                      <option value="CustomPost">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=cataloghi</option>
-                      <option value="CustomPost">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=direttori</option>
-                      <option value="CustomPost">http://stage.liquidfactory.it/villamedici/fr/wp-json/wp-react/v1/custom-post?type=actualites</option>
+                    <optgroup label="Select Custom Posts" id="custom_post_urls">
                     </optgroup>
-                    <optgroup label="Taxonomy">
-                      <option value="Taxonomy">http://stage.liquidfactory.it/villamedici/wp-json/test-plugin/v1/parent-terms?taxonomy=categoria-consigli</option>
-                      <option value="Taxonomy">http://stage.liquidfactory.it/villamedici/wp-json/test-plugin/v1/parent-terms?taxonomy=categoria-residenze</option>
-                      <option value="Taxonomy">http://stage.liquidfactory.it/villamedici/wp-json/test-plugin/v1/parent-terms?taxonomy=categoria-giovedi</option>
+                    <optgroup label="Select Taxonomy"  id="taxonomy_urls">
                     </optgroup>
                   </select>
                 </div>
@@ -59,7 +48,7 @@
                     <select class="selectpicker" multiple id="terms">
                     </select>
                   </div>
-              </div>
+                </div>
                 <div class="form-group">
                   <a class="btn btn-app" onClick="UploadScreenDetails()">
                   <i class="fa fa-save"></i> Save
@@ -85,11 +74,21 @@
     <?php include "footer.php"; ?>
     <script src="../controller/routehandler.js"></script>
     <script>
-      $(document).ready(function(){
+      $(document).ready(function() {
          $('#termdiv').hide();
-         $('#layout li a').on('click', function(){
-            alert(1);
-        });
+         $.getJSON('http://stage.liquidfactory.it/villamedici/wp-json/wp-react-native-converter/v1/list-endpoints/', function(result){
+            $.each( result.page_url, function(i, field ) {
+              $("#page_urls").append('<option value='+field.url+'>'+field.label+'</option>');
+            })
+            $.each( result.custom_post_url, function(i, field ) {
+              $("#custom_post_urls").append('<option value="CustomPost">'+field+'</option>');
+            })
+            $.each( result.taxonomy_url, function(i, field ) {
+              $("#taxonomy_urls").append('<option value="Taxonomy">'+field+'</option>');
+            })
+            $("#url").selectpicker("refresh");
+            $('#loader').remove();
+         });
       });
     </script>
   </body>

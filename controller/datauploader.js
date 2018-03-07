@@ -1,7 +1,7 @@
 var fileName = '';
 var downloadURL = '';
 var config = {
-  databaseURL: "https://wp-react.firebaseio.com/",
+  databaseURL: "https://chainside-731fd.firebaseio.com/",
   storageBucket: "gs://wp-react.appspot.com",
 };
 firebase.initializeApp(config);

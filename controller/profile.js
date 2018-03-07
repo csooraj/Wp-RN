@@ -23,6 +23,8 @@ function UploadEditProfileDetails() {
   let EditProfile_submitFont = e3.options[e3.selectedIndex].text;
   let EditProfile_submitFontIOS = document.getElementById("EditProfile_submitFontIOS").value;
 
+  let User_fields = $('#terms').val();
+
   if ((EditProfile_cpSize !== '') && (EditProfile_cpTitleColor !== '') && (EditProfile_submitTextSize  !== '')) {
     document.getElementById("Error").innerHTML = "";
       var data = {
@@ -41,6 +43,7 @@ function UploadEditProfileDetails() {
         "EditProfileButtonTextFontIOS": EditProfile_submitFontIOS,
         "EditProfileButtonTextColor": EditProfile_SubmitTextColor,
         "EditProfileButtonBg": EditProfile_submitBg,
+        "UserFields": User_fields,
         "UserNameFormBorderColor": EditProfile_formBorderColor,
       };
     firebase.database().ref("Test/Profile").update(data, function(error) {

@@ -233,6 +233,13 @@
                     </div>
                   </div>
                 </div>
+                <div id="termdiv">
+                  <label for="sel1">Select The Fields That Should Be Shown</label>
+                  <div class="form-group">
+                    <select class="selectpicker" multiple id="terms">
+                    </select>
+                  </div>
+                </div>
                 <div class="form-group">
                   <a class="btn btn-app" onClick="UploadEditProfileDetails()">
                   <i class="fa fa-save"></i> Save
@@ -283,6 +290,13 @@
           $("#EditProfile_submitBg").val(obj.EditProfileButtonBg); $("#EditProfile_submitBg").trigger('change');
           $("#EditProfile_SubmitTextColor").val(obj.EditProfileButtonTextColor); $("#EditProfile_SubmitTextColor").trigger('change');
         }
+      });
+      $('#terms').empty();
+      $.getJSON('http://stage.liquidfactory.it/villamedici/wp-json/wp-react-native-converter/v1/user-meta-fields-key', function(result){
+         $.each(result, function(i, field){
+           $("#terms").append('<option value='+field+'>'+field+'</option>');
+         });
+         $('#terms').selectpicker('refresh');
       });
      });
   </script>

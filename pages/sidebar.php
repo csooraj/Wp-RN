@@ -65,6 +65,7 @@
           <li id="myid12"><a href="./profile.php"><i class="fa fa-circle-o"></i>Profile</a></li>
           <li id="myid13"><a href="./editprofile.php"><i class="fa fa-circle-o"></i>Edit Profile</a></li>
           <li id="myid14"><a href="./comment.php"><i class="fa fa-circle-o"></i>Comment</a></li>
+          <li id="myid15"><a href="./locale.php"><i class="fa fa-circle-o"></i>Set Locale</a></li>
         </ul>
       </li>
       <li class="treeview" id="downloads">
@@ -77,6 +78,7 @@
         <ul class="treeview-menu">
 
           <li><a href="./download.php"><i class="fa fa-circle-o"></i>App Configuration.json</a></li>
+          <li><a href="./buildapp.php"><i class="fa fa-circle-o"></i>Download Apk</a></li>
         </ul>
       </li>
     </ul>
