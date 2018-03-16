@@ -8,11 +8,11 @@ function UploadAwsDetails() {
   let amount = document.getElementById("amount").value;
   let amountpaid = document.getElementById("amountpaid").value;
   let rate = document.getElementById("rate").value;
-  let createdat = document.getElementById("createdat").value;
-  let lowFee = document.getElementById("lowfee").value;
-  if(lowFee === 'true'){
+  let createdat = '2018-02-07 15:23:40.176910';
+  let lowFee = document.querySelector('input[name="optradio"]:checked').value;
+  if (lowFee === 'true') {
     riskTransaction = true;
-  }else{
+  } else {
     riskTransaction = false;
   }
 

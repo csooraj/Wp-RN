@@ -21,8 +21,13 @@
                   <input id="event" class="form-control" type="text" placeholder="Enter Event" required>
                 </div>
                 <div class="form-group">
-                  <label>Enter Payment Status</label>
-                  <input id="paymentstatus" class="form-control" type="text" placeholder="Enter Payment status" required>
+                  <label for="sel1">Enter Payment Status</label>
+                  <select class="form-control" id="paymentstatus">
+                    <option>pending</option>
+                    <option>completed</option>
+                    <option>expired</option>
+                    <option>cancelled</option>
+                  </select>
                 </div>
                 <div class="form-group">
                   <label>Enter Client Id</label>
@@ -46,11 +51,18 @@
                 </div>
                 <div class="form-group">
                   <label>Enter Created At</label>
-                  <input id="createdat" class="form-control" type="text" placeholder="Enter Created At" required>
+                  <input id="createdat" class="form-control" type="date" placeholder="Enter Created At" required>
                 </div>
                 <div class="form-group">
-                  <label>Enter Low Fee Risk Transaction Status</label>
-                  <input id="lowfee" class="form-control" type="text" placeholder="Enter Created At" required>
+                  <label>Low Risk Transaction Status</label>
+                  <div>
+                    <label class="radio-inline">
+                    <input type="radio" id="r2" name="optradio" value="true">True
+                    </label>
+                    <label class="radio-inline">
+                    <input type="radio" id="r1" name="optradio" value="false">False
+                    </label>
+                  </div>
                 </div>
                 <div class="form-group">
                   <a class="btn btn-app" onclick="UploadAwsDetails()">
