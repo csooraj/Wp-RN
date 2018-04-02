@@ -26,6 +26,7 @@
                     <option>pending</option>
                     <option>completed</option>
                     <option>expired</option>
+                    <option>unconfirmed</option>
                     <option>cancelled</option>
                   </select>
                 </div>
