@@ -18,7 +18,11 @@
               <div class="box-body">
                 <div class="form-group">
                   <label>Enter Event</label>
-                  <input id="event" class="form-control" type="text" placeholder="Enter Event" required>
+                  <select class="form-control" id="event">
+                    <option>transaction.unconfirmed</option>
+                    <option>transaction.confirmed</option>
+                    <option>paymentorder.expired</option>
+                  </select>
                 </div>
                 <div class="form-group">
                   <label for="sel1">Enter Payment Status</label>
@@ -26,7 +30,6 @@
                     <option>pending</option>
                     <option>completed</option>
                     <option>expired</option>
-                    <option>unconfirmed</option>
                     <option>cancelled</option>
                   </select>
                 </div>
