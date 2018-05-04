@@ -47,7 +47,7 @@
                   <label>Low Risk Transaction Status</label>
                   <div>
                     <label class="radio-inline">
-                    <input type="radio" id="r2" name="optradio" value="true">True
+                    <input type="radio" id="r2" name="optradio" value="true" checked="checked">True
                     </label>
                     <label class="radio-inline">
                     <input type="radio" id="r1" name="optradio" value="false">False
