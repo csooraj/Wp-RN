@@ -1,13 +1,11 @@
 function UploadAwsDetails() {
   let riskTransaction = '';
   let database = firebase.database();
-  let event = 'paymentorder.status.updated';
-  let prev_status = 'pending';
-  let next_status = document.getElementById("next_status").value;
+  let event = 'paymentorder.amount.updated';
   let clientid = document.getElementById("clientid").value;
   let address = document.getElementById("address").value;
-  let amount = document.getElementById("amount").value;
-  let amountpaid = document.getElementById("amountpaid").value;
+  let prev_amount = document.getElementById("prev_amount").value;
+  let next_amount = document.getElementById("next_amount").value;
   let rate = document.getElementById("rate").value;
   let createdat = '2018-02-07 15:23:40.176910';
   let lowFee = document.querySelector('input[name="optradio"]:checked').value;
@@ -21,14 +19,12 @@ function UploadAwsDetails() {
   if (1) {
     const options = {
       event: event,
-      prev_status: prev_status,
-      next_status: next_status,
+      amount: prev_amount,
+      amountpaid: next_amount,
       clientid: clientid,
       address: address,
-      amount: amount,
-      amountpaid: amountpaid,
       rate: rate,
-      riskTransaction: riskTransaction,
+      riskTransaction: true,
       createdat: createdat,
     }
     firebase.database().ref("Transactions").push(options, function(error) {

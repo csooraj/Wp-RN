@@ -15,22 +15,27 @@
               <div class="box-header">
                 <h3 class="box-title">Configure Notification</h3>
               </div>
+              <div class="box-header">
+                <h3 class="box-title">Test - paymentorder.status.updated - Notifications</h3>
+              </div>
               <div class="box-body">
                 <div class="form-group">
-                  <label>Enter Event</label>
-                  <select class="form-control" id="event">
-                    <option>transaction.unconfirmed</option>
-                    <option>transaction.confirmed</option>
-                    <option>paymentorder.expired</option>
+                  <label>event</label>
+                  <select class="form-control" id="event" disabled>
+                    <option selected="selected">paymentorder.status.updated</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="sel1">Enter Payment Status</label>
-                  <select class="form-control" id="paymentstatus">
-                    <option>pending</option>
-                    <option>completed</option>
-                    <option>expired</option>
-                    <option>cancelled</option>
+                  <label for="sel1">prev_status</label>
+                  <select class="form-control" disabled>
+                    <option selected="selected">pending</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sel1">next_status</label>
+                  <select class="form-control" id="next_status">
+                    <option selected="selected">completed</option>
+                    <option selected="selected">unconfirmed</option>
                   </select>
                 </div>
                 <div class="form-group">

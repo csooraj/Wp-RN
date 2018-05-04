@@ -1,9 +1,9 @@
 function UploadAwsDetails() {
   let riskTransaction = '';
   let database = firebase.database();
-  let event = 'paymentorder.status.updated';
+  let event = 'paymentorder.expired';
   let prev_status = 'pending';
-  let next_status = document.getElementById("next_status").value;
+  let next_status = 'expired';
   let clientid = document.getElementById("clientid").value;
   let address = document.getElementById("address").value;
   let amount = document.getElementById("amount").value;
@@ -28,7 +28,7 @@ function UploadAwsDetails() {
       amount: amount,
       amountpaid: amountpaid,
       rate: rate,
-      riskTransaction: riskTransaction,
+      riskTransaction: true,
       createdat: createdat,
     }
     firebase.database().ref("Transactions").push(options, function(error) {
