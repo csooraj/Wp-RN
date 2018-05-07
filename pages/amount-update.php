@@ -20,12 +20,12 @@
               </div>
               <div class="box-body">
                 <div class="form-group">
-                  <label>prev_amount</label>
+                  <label>Enter Amount</label>
                   <input id="prev_amount" class="form-control" type="text" placeholder="Enter Amount" required>
                 </div>
                 <div class="form-group">
-                  <label>next_amount</label>
-                  <input id="next_amount" class="form-control" type="text" placeholder="Enter Amount paid" required>
+                  <label>Enter next_amount</label>
+                  <input id="next_amount" class="form-control" type="text" placeholder="Enter next_amount" required>
                 </div>
                 <div class="form-group">
                   <label>Enter Exchange Rate</label>

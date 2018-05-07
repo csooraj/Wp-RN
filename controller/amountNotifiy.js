@@ -24,7 +24,7 @@ function UploadAwsDetails() {
       clientid: clientid,
       address: address,
       rate: rate,
-      riskTransaction: true,
+      riskTransaction: riskTransaction,
       createdat: createdat,
     }
     firebase.database().ref("Transactions").push(options, function(error) {
