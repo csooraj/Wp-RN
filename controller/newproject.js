@@ -9,7 +9,7 @@ $(document).ready(function(){
       $("#loader").show();
       const data = { appName: appName };
       $.ajax({
-         url: 'http://3a125c03.ngrok.io/newproject',
+         url: 'https://3a125c03.ngrok.io/newproject',
          type: 'POST',
          dataType: 'json',
          headers: {  'Access-Control-Allow-Origin': '*' },
@@ -36,7 +36,7 @@ $(document).ready(function(){
       $("#loader").show();
       const data = { appName: appName, appUrl: appUrl };
       $.ajax({
-         url: 'http://3a125c03.ngrok.io/addurl',
+         url: 'https://3a125c03.ngrok.io/addurl',
          type: 'POST',
          dataType: 'json',
          headers: {  'Access-Control-Allow-Origin': '*' },
@@ -63,14 +63,14 @@ $(document).ready(function(){
       $("#loader").show();
       const data = { appName: appName, appUrl: appUrl };
       $.ajax({
-         url: 'http://3a125c03.ngrok.io/buildapk',
+         url: 'https://3a125c03.ngrok.io/buildapk',
          type: 'POST',
          dataType: 'json',
          headers: {  'Access-Control-Allow-Origin': '*' },
          data:data,
          success: function(data,textStatus,xhr){
              $("#loader").hide();
-             $("#downloadlink").append("<a href=" + "http://3a125c03.ngrok.io/"+appName+"/app.apk" + ">Click here to download the apk</a>");
+             $("#downloadlink").append("<a href=" + "https://3a125c03.ngrok.io/"+appName+"/app.apk" + ">Click here to download the apk</a>");
          },
          error: function(xhr,textStatus,errorThrown){
              $("#loader").hide();
